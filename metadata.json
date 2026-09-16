@@ -1,0 +1,6 @@
+{
+  "name": "Kenya Coffee Ai",
+  "description": "An interactive, visually rich Kenyan coffee landing page featuring GSAP animations and Gemini AI capabilities for image analysis, high thinking querying, and image generation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

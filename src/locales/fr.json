@@ -1,0 +1,172 @@
+{
+  "nav": {
+    "home": "ACCUEIL",
+    "about": "À PROPOS",
+    "our_coffee": "NOTRE CAFÉ",
+    "production": "PRODUCTION",
+    "traceability": "TRAÇABILITÉ",
+    "why_kenya": "POURQUOI LE KENYA",
+    "contact": "CONTACT",
+    "our_team": "NOTRE ÉQUIPE",
+    "get_in_touch": "NOUS CONTACTER",
+    "ai_lab": "LABORATOIRE IA"
+  },
+  "footer": {
+    "contact": "Contact",
+    "privacy": "Politique de confidentialité",
+    "terms": "Conditions générales",
+    "rights": "© 2026 KILOLUA. Tous droits réservés."
+  },
+  "landing": {
+    "hero": {
+      "line1": "CAFÉ DU KENYA",
+      "line2": "NÉGOCIÉ AVEC BUT",
+      "desc": "Découvrez une fraîcheur<br/>et une qualité véritables,<br/>où le goût rencontre l'innovation"
+    },
+    "about": {
+      "subtitle": "Un peu à propos de nous",
+      "title": "NOTRE<br/>ENTREPRISE",
+      "desc": "Kilolua est un exportateur familial de café vert kényan reliant les hauts plateaux du Kenya avec des torréfacteurs de spécialité et des importateurs éthiques du monde entier.",
+      "btn": "À PROPOS"
+    },
+    "products": {
+      "subtitle": "Découvrez la vitesse",
+      "title": "NOTRE CAFÉ",
+      "label": "L'Original",
+      "can_title": "RC COLA",
+      "btn": "VOIR LE PRODUIT",
+      "location": "COLUMBUS, GÉORGIE, ÉTATS-UNIS",
+      "since": "— Depuis 1905 —"
+    },
+    "media": {
+      "title": "POURQUOI LE KENYA",
+      "subtitle": "Origine d'Excellence",
+      "desc": "Les régions de haute altitude du Kenya, ses sols volcaniques et son climat si particulier offrent un environnement idéal pour cultiver certains des cafés de spécialité les plus recherchés au monde. Le dévouement des agriculteurs locaux garantit une récolte exceptionnelle, année après année.",
+      "bio": "Biodiversité",
+      "bio_val": "11",
+      "bio_unit": "kg/ha de micro-organismes",
+      "carbon": "Stock de carbone",
+      "carbon_val": "260",
+      "carbon_unit": "t/ha d'équivalent CO2"
+    },
+    "brands": {
+      "subtitle": "Collaboration & Croissance",
+      "title": "Devenez Partenaire de <br className=\"md:hidden\" />Kilolua",
+      "buyer": "Je suis Acheteur de Café",
+      "farmer": "Je suis Agriculteur / Coopérative",
+      "exit": "SORTIE"
+    },
+    "why_kenya": {
+      "title": "Pourquoi le Kenya.",
+      "desc": "Les hauts plateaux du Kenya créent les conditions pour des cafés d'une clarté, d'une complexité et d'un caractère remarquables.",
+      "sub": "Altitude. Sol. Climat. Variété.",
+      "higher_title": "L'ALTITUDE CHANGE TOUT.",
+      "higher_p1": "Dans les hauts plateaux centraux du Kenya, le café pousse à des altitudes où les températures fraîches, les sols volcaniques riches et les précipitations favorables créent un environnement idéalement adapté à l'Arabica.",
+      "higher_p2": "Murang'a, Nyeri et Kirinyaga se situent dans ce paysage de culture remarquable — chacun produisant des cafés avec sa propre expression du terroir.",
+      "legacy_title": "UN HÉRITAGE DE VARIÉTÉ.",
+      "legacy_desc": "L'histoire du café kényan est aussi l'histoire de variétés exceptionnelles.",
+      "var1": "SL28",
+      "var1_desc": "réputé pour sa complexité et son caractère fruité distinctif.",
+      "var2": "SL34",
+      "var2_desc": "prisé pour sa profondeur, sa structure et sa capacité à s'épanouir.",
+      "var3": "Ruiru 11",
+      "var3_desc": "apporte une résistance aux maladies et un fort potentiel en tasse.",
+      "var4": "Batian",
+      "var4_desc": "combine résilience et qualité.",
+      "map_title": "TROIS ORIGINES. DIFFÉRENTES EXPRESSIONS.",
+      "map_muranga_title": "MURANG'A",
+      "map_muranga_desc": "Fermes d'altitude, sols riches et une forte culture du café de petits producteurs.",
+      "map_nyeri_title": "NYERI",
+      "map_nyeri_desc": "Café de haute altitude connu pour sa complexité, son acidité vibrante et son caractère fruité expressif.",
+      "map_kirinyaga_title": "KIRINYAGA",
+      "map_kirinyaga_desc": "Sols volcaniques et conditions de culture en haute altitude produisant des cafés vifs et distinctifs.",
+      "map_footer": "Un pays. Plusieurs expressions.",
+      "forward_title": "LE KENYA VA DE L'AVANT.",
+      "forward_p1": "Le secteur du café kényan subit d'importants changements. Les réformes créent de nouvelles opportunités pour une plus grande transparence, une plus forte participation des agriculteurs et plus de valeur directe à l'origine.",
+      "forward_p2": "Pour les acheteurs de spécialité, cela signifie une origine avec à la fois un héritage caféier extraordinaire et une opportunité croissante de construire des chaînes d'approvisionnement plus transparentes et axées sur les relations.",
+      "bright_title": "VIF. COMPLEXE. DISTINCTEMENT KÉNYAN.",
+      "bright_desc": "L'Arabica kényan est célèbre pour son acidité vibrante, son corps plein et son caractère fruité. Des variétés telles que le SL28, le SL34, le Ruiru 11 et le Batian contribuent à une remarquable diversité de saveurs, tandis que l'altitude, le sol et le traitement façonnent la tasse finale.",
+      "card1_title": "Climat et Traitement",
+      "card2_title": "Sols Volcaniques"
+    }
+  },
+  "traceability": {
+    "intro_subtitle": "Créer la qualité",
+    "intro_title": "Traçabilité",
+    "intro_desc": "Chaque lot Kilolua commence par une origine connue. Nous travaillons avec des agriculteurs et des coopératives dans les hauts plateaux producteurs de café du Kenya, gardant le voyage visible depuis la source, à travers le traitement, l'exportation, et finalement jusqu'à la brûlerie.",
+    "featured_title": "CHAQUE LOT A UNE<br/>HISTOIRE",
+    "featured_desc": "De la ferme et de la coopérative à la transformation, l'exportation et la brûlerie, Kilolua s'efforce de garder visible le voyage du café kényan. La traçabilité n'est pas une caractéristique supplémentaire — elle fait partie de notre façon de commercer.",
+    "map_desc": "Notre café commence dans les hauts plateaux du Kenya, où nous travaillons avec des agriculteurs et des coopératives dans des régions telles que Murang'a, Nyeri et Kirinyaga. Chaque origine apporte son propre caractère. Depuis ces régions productrices, Kilolua relie le café vert kényan traçable avec des acheteurs de spécialité du monde entier."
+  },
+  "coffee_exp": {
+    "back": "← RETOUR AU CATALOGUE"
+  },
+  "about_page": {
+    "hero_title": "QUI NOUS SOMMES",
+    "hero_subtitle": "Une entreprise kényane, bâtie sur les relations.",
+    "hero_desc": "Kilolua est un exportateur familial de café vert kényan reliant les agriculteurs et coopératives des hauts plateaux du Kenya avec des torréfacteurs de spécialité et des acheteurs éthiques du monde entier.",
+    "cta": "TRAVAILLER AVEC KILOLUA",
+    "steps": {
+      "1_step": "01 — LE COMMENCEMENT",
+      "1_title": "CONSTRUIT À PARTIR D'ICI.",
+      "1_text1": "Kilolua a été fondé par Gordon et Christine Denoon, réunissant une profonde expérience dans la chaîne d'approvisionnement, les opérations, le développement humanitaire et le commerce transfrontalier en Afrique de l'Est.",
+      "1_text2": "Ils ont vu une opportunité de construire quelque chose de différent : une entreprise de café où qualité, succès commercial et justice pour les agriculteurs pourraient coexister.",
+      "2_step": "02 — NOS RACINES",
+      "2_title": "KÉNYAN PAR CONCEPTION.",
+      "2_text1": "Kilolua est majoritairement détenue par des femmes et des Kényans, avec des racines qui s'étendent des communautés productrices de café de Murang'a à Nairobi et au-delà.",
+      "2_text2": "Notre lien avec le Kenya n'est pas simplement l'endroit où nous opérons. Il façonne la façon dont nous construisons des relations, dont nous approvisionnons le café et dont nous concevons l'avenir de l'entreprise.",
+      "3_step": "03 — LES GENS",
+      "3_title": "UNE FAMILLE, SANS FRONTIÈRES.",
+      "3_text1": "Le conseil d'administration de Kilolua s'étend sur trois continents. Jane Macharia est basée à Murang'a, maintenant des relations directes avec les agriculteurs et coopératives au cœur du pays du café kényan.",
+      "3_text2": "Brian Macharia est basé en France, offrant à Kilolua une connexion naturelle aux marchés européens. Lily Macharia est basée en Australie, l'un de nos marchés clés et foyer d'une culture florissante du café de spécialité. Cette géographie est intentionnelle. Elle permet à Kilolua de rester connecté aux deux côtés du voyage du café — origine et destination.",
+      "4_step": "04 — NOTRE CONVICTION",
+      "4_title": "FAIRE LE BIEN. RÉUSSIR.",
+      "4_text1": "Nous croyons que le succès commercial et l'impact significatif ne sont pas en compétition. Relations équitables, commerce transparent et café de qualité ne sont pas des ambitions distinctes. Elles font partie du même modèle.",
+      "4_text2": "Nous voulons bâtir des relations qui créent de la valeur pour les agriculteurs, les coopératives, les acheteurs et finalement pour ceux qui boivent le café.",
+      "5_step": "05 — FEMMES & PROPRIÉTÉ",
+      "5_title": "UN ENJEU, PAS DES SLOGANS.",
+      "5_text1": "Les femmes contribuent de manière significative à la chaîne de valeur du café au Kenya, pourtant leur propriété et leur représentation sont historiquement restées limitées.",
+      "5_text2": "La propriété majoritairement féminine et kényane de Kilolua est donc plus qu'une déclaration d'identité. Cela reflète le genre d'entreprise que nous voulons bâtir — une entreprise où les personnes liées à l'économie du café au Kenya peuvent avoir un véritable enjeu dans son avenir. Notre approche du réinvestissement communautaire se façonne à travers le dialogue avec les agriculteurs et les communautés à nos côtés.",
+      "6_step": "06 — NOTRE NOM",
+      "6_title": "UN NOM À NOUS.",
+      "6_text1": "Kilolua est un nom inventé. Nous l'avons créé pour évoquer les terres Kikuyu où pousse une grande partie du meilleur café du Kenya, la chaleur et l'histoire stratifiée des communautés qui nous entourent, et les liens familiaux qui s'étendent du Kenya à l'Europe et l'Australie.",
+      "6_text2": "Il porte quelque chose du rythme du swahili et de la texture des hauts plateaux — enraciné, paisible et distinctement le nôtre. Un nom que nous avons créé. Une entreprise qui nous appartient.",
+      "7_step": "07 — L'AVENIR",
+      "7_title": "CONSTRUIT POUR DURER.",
+      "7_text1": "Kilolua est bâti pour des relations à long terme, pas pour des transactions à court terme.",
+      "7_text2": "Nous développons un réseau d'agriculteurs, de coopératives, de torréfacteurs de spécialité et d'importateurs qui croient que savoir d'où vient le café rend le café — et l'entreprise qui le sous-tend — meilleur. Des hauts plateaux du Kenya aux torréfacteurs du monde entier, nous construisons quelque chose dont il vaut la peine de faire partie."
+    }
+  },
+  "production": {
+    "hero_title": "DE LA CERISE<br/>À L'EXPÉDITION",
+    "hero_desc": "Le voyage du café kényan — cultivé, sélectionné, traité et préparé pour le monde.",
+    "cta_title": "LE VOYAGE CONTINUE.",
+    "cta_desc": "Des terres kényanes aux torréfacteurs de spécialité du monde entier.",
+    "steps": {
+      "1_step": "01 — CULTURE",
+      "1_title": "OÙ TOUT COMMENCE",
+      "1_text1": "Chaque café Kilolua commence avec des agriculteurs cultivant l'Arabica dans les hauts plateaux du Kenya. Murang'a, Nyeri et Kirinyaga offrent l'altitude, les sols volcaniques et le climat qui créent les conditions d'un café de spécialité distinctif.",
+      "1_text2": "Nous travaillons avec des agriculteurs et des coopératives à l'origine, bâtissant des relations qui nous permettent de comprendre non seulement le café, mais les personnes et les lieux derrière chaque lot.",
+      "2_step": "02 — RÉCOLTE",
+      "2_title": "CUEILLI AVEC SOIN",
+      "2_text1": "Les cerises de café sont soigneusement récoltées lorsqu'elles atteignent le bon stade de maturité. La récolte sélective permet de s'assurer que seules les cerises appropriées entrent dans le processus de production, protégeant la qualité et le caractère du lot final.",
+      "2_text2": "Le résultat commence dans le champ : une meilleure sélection à la récolte crée une base plus solide pour tout ce qui suit.",
+      "3_step": "03 — TRAITEMENT",
+      "3_title": "CARACTÈRE RÉVÉLÉ",
+      "3_text1": "Le traitement joue un rôle déterminant dans le caractère d'un café. Kilolua propose des lots entièrement lavés, nature et process honey, chacun révélant différentes expressions de l'origine et de la variété du café.",
+      "3_text2": "Des cerises soigneusement sélectionnées aux grains verts séchés et préparés, chaque étape est gérée avec une attention portée à la qualité et à la cohérence.",
+      "4_step": "04 — SÉLECTION",
+      "4_title": "QUALITÉ, LOT PAR LOT",
+      "4_text1": "Une fois traité et préparé, le café est évalué et sélectionné en fonction de sa qualité, de son origine, de sa variété et des caractéristiques du lot.",
+      "4_text2": "Notre objectif n'est pas simplement de déplacer du volume. Nous recherchons des cafés ayant une histoire qui mérite d'être connue — traçable jusqu'à leur région de culture, leur coopérative ou leur ferme, et suffisamment constants pour que les acheteurs de spécialité puissent nouer des relations autour d'eux.",
+      "5_step": "05 — EXPORTATION",
+      "5_title": "PRÊT POUR LE MONDE",
+      "5_text1": "De l'origine à la destination, l'exportation de café vert est autant une affaire de logistique qu'une affaire de négoce.",
+      "5_text2": "Kilolua apporte plus de deux décennies d'expérience en chaîne d'approvisionnement, approvisionnement et gestion des exportations en Afrique de l'Est. Nous coordonnons la documentation, la conformité douanière et la logistique pour acheminer le café de manière fiable du Kenya aux torréfacteurs et importateurs de spécialité au Royaume-Uni, en Europe, en Australie et en Asie.",
+      "6_step": "06 — TORRÉFACTION",
+      "6_title": "DU KENYA. À VOTRE TASSE.",
+      "6_text1": "Le voyage se termine à la brûlerie — mais l'histoire continue dans chaque tasse.",
+      "6_text2": "Nous mettons en relation des acheteurs de spécialité avec du café vert kényan qui porte son origine, son caractère et son voyage avec lui. Des fermes des hauts plateaux aux brûleries du monde entier, Kilolua existe pour rendre cette connexion significative."
+    }
+  }
+}

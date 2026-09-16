@@ -1,0 +1,172 @@
+{
+  "nav": {
+    "home": "HOME",
+    "about": "ABOUT",
+    "our_coffee": "OUR COFFEE",
+    "production": "PRODUCTION",
+    "traceability": "TRACEABILITY",
+    "why_kenya": "WHY KENYA",
+    "contact": "CONTACT",
+    "our_team": "OUR TEAM",
+    "get_in_touch": "GET IN TOUCH",
+    "ai_lab": "AI LAB"
+  },
+  "footer": {
+    "contact": "Contact",
+    "privacy": "Privacy Policy",
+    "terms": "Terms & Conditions",
+    "rights": "© 2026 KILOLUA. All Rights Reserved."
+  },
+  "landing": {
+    "hero": {
+      "line1": "KENYAN COFFEE",
+      "line2": "TRADED WITH PURPOSE",
+      "desc": "Experience true freshness<br/>and quality, where taste<br/>meets innovation"
+    },
+    "about": {
+      "subtitle": "Something about us",
+      "title": "OUR<br/>COMPANY",
+      "desc": "Kilolua, is a kenyan family owned green coffee exporter connecting the highlands of Kenya with speciality roasters and ethical importers around the world.",
+      "btn": "ABOUT"
+    },
+    "products": {
+      "subtitle": "Meet the speed",
+      "title": "OUR COFFEE",
+      "label": "The Original",
+      "can_title": "RC COLA",
+      "btn": "VIEW PRODUCT",
+      "location": "COLUMBUS, GEORGIA, USA",
+      "since": "— Since 1905 —"
+    },
+    "media": {
+      "title": "WHY KENYA",
+      "subtitle": "Origin of Excellence",
+      "desc": "Kenya’s high-altitude regions, volcanic soils, and distinct climate provide the perfect environment for cultivating some of the world's most sought-after specialty coffees. The dedication of local farmers ensures an exceptional harvest year after year.",
+      "bio": "Biodiversity",
+      "bio_val": "11",
+      "bio_unit": "kg/ha of microorganisms",
+      "carbon": "Carbon stock",
+      "carbon_val": "260",
+      "carbon_unit": "t/ha of equivalent CO2"
+    },
+    "brands": {
+      "subtitle": "Collaboration & Growth",
+      "title": "Partner With <br className=\"md:hidden\" />Kilolua",
+      "buyer": "I'm a Coffee Buyer",
+      "farmer": "I'm a Farmer / Cooperative",
+      "exit": "EXIT"
+    },
+    "why_kenya": {
+      "title": "WHY KENYA",
+      "desc": "Kenya's highlands create the conditions for coffees with remarkable clarity, complexity and character.",
+      "sub": "Altitude. Soil. Climate. Variety.",
+      "higher_title": "HIGHER CHANGES EVERYTHING.",
+      "higher_p1": "Across Kenya's Central Highlands, coffee grows at elevations where cool temperatures, rich volcanic soils and favourable rainfall create an environment ideally suited to Arabica.",
+      "higher_p2": "Murang'a, Nyeri and Kirinyaga sit within this remarkable growing landscape — each producing coffees with its own expression of place.",
+      "legacy_title": "A LEGACY OF VARIETY.",
+      "legacy_desc": "Kenya's coffee story is also a story of exceptional varieties.",
+      "var1": "SL28",
+      "var1_desc": "renowned for its complexity and distinctive fruit character.",
+      "var2": "SL34",
+      "var2_desc": "prized for its depth, structure and ability to thrive.",
+      "var3": "Ruiru 11",
+      "var3_desc": "brings disease resistance and strong cup potential.",
+      "var4": "Batian",
+      "var4_desc": "combines resilience with quality.",
+      "map_title": "THREE ORIGINS. DIFFERENT EXPRESSIONS.",
+      "map_muranga_title": "MURANG'A",
+      "map_muranga_desc": "Highland farms, rich soils and a strong smallholder coffee culture.",
+      "map_nyeri_title": "NYERI",
+      "map_nyeri_desc": "High-elevation coffee known for complexity, vibrant acidity and expressive fruit character.",
+      "map_kirinyaga_title": "KIRINYAGA",
+      "map_kirinyaga_desc": "Volcanic soils and high-altitude growing conditions producing bright, distinctive coffees.",
+      "map_footer": "One country. Many expressions.",
+      "forward_title": "KENYA IS MOVING FORWARD.",
+      "forward_p1": "Kenya's coffee sector is undergoing significant change. Reforms are creating new opportunities for greater transparency, stronger farmer participation and more direct value at origin.",
+      "forward_p2": "For specialty buyers, that means an origin with both an extraordinary coffee heritage and a growing opportunity to build more transparent, relationship-driven supply chains.",
+      "bright_title": "BRIGHT. COMPLEX. DISTINCTLY KENYAN.",
+      "bright_desc": "Kenyan Arabica is celebrated for its vibrant acidity, full body and fruit-forward character. Varieties such as SL28, SL34, Ruiru 11 and Batian contribute to a remarkable diversity of flavour, while altitude, soil and processing shape the final cup.",
+      "card1_title": "Climate & Processing",
+      "card2_title": "Volcanic Soils"
+    }
+  },
+  "traceability": {
+    "intro_subtitle": "Crafting quality",
+    "intro_title": "Traceability",
+    "intro_desc": "Every Kilolua lot begins with a known origin. We work with farmers and cooperatives across Kenya's coffee-growing highlands, keeping the journey visible from source through processing, export, and ultimately to the roastery.",
+    "featured_title": "EVERY LOT HAS A<br/>STORY",
+    "featured_desc": "From farm and cooperative to processing, export and roastery, Kilolua works to keep the journey of Kenyan coffee visible. Traceability is not an added feature — it is part of how we trade.",
+    "map_desc": "Our coffee begins in Kenya's highlands, where we work with farmers and cooperatives across regions including Murang'a, Nyeri and Kirinyaga. Each origin contributes its own character. From these growing regions, Kilolua connects traceable Kenyan green coffee with specialty buyers across the world."
+  },
+  "coffee_exp": {
+    "back": "← BACK TO CATALOG"
+  },
+  "about_page": {
+    "hero_title": "WHO WE ARE",
+    "hero_subtitle": "A Kenyan business, built around relationships.",
+    "hero_desc": "Kilolua is a family-owned Kenyan green coffee exporter connecting farmers and cooperatives in Kenya's highlands with specialty roasters and ethically-minded buyers around the world.",
+    "cta": "WORK WITH KILOLUA",
+    "steps": {
+      "1_step": "01 — THE BEGINNING",
+      "1_title": "BUILT FROM HERE.",
+      "1_text1": "Kilolua was founded by Gordon and Christine Denoon, bringing together deep experience in supply chain, operations, humanitarian development and cross-border trade across East Africa.",
+      "1_text2": "They saw an opportunity to build something different: a coffee business where quality, commercial success and doing right by farmers could exist together.",
+      "2_step": "02 — OUR ROOTS",
+      "2_title": "KENYAN BY DESIGN.",
+      "2_text1": "Kilolua is majority women and Kenyan-owned, with roots that extend from the coffee-growing communities of Murang'a to Nairobi and beyond.",
+      "2_text2": "Our connection to Kenya is not simply where we operate. It shapes how we build relationships, how we source coffee and how we think about the future of the business.",
+      "3_step": "03 — THE PEOPLE",
+      "3_title": "A FAMILY, ACROSS BORDERS.",
+      "3_text1": "Kilolua's board spans three continents. Jane Macharia is based in Murang'a, maintaining direct relationships with farmers and cooperatives at the heart of Kenya's coffee country.",
+      "3_text2": "Brian Macharia is based in France, giving Kilolua a natural connection to European markets. Lily Macharia is based in Australia, one of our key markets and home to a growing specialty coffee culture. That geography is intentional. It allows Kilolua to stay connected to both sides of the coffee journey — origin and destination.",
+      "4_step": "04 — OUR BELIEF",
+      "4_title": "DOING RIGHT. DOING WELL.",
+      "4_text1": "We believe commercial success and meaningful impact do not have to compete. Fair relationships, transparent trading and quality coffee are not separate ambitions. They are part of the same model.",
+      "4_text2": "We want to build relationships that create value for farmers, cooperatives, buyers and ultimately the people who drink the coffee.",
+      "5_step": "05 — WOMEN & OWNERSHIP",
+      "5_title": "STAKE, NOT SLOGANS.",
+      "5_text1": "Women contribute significantly to Kenya's coffee value chain, yet their ownership and representation have historically remained limited.",
+      "5_text2": "Kilolua's majority women and Kenyan ownership is therefore more than a statement about identity. It reflects the kind of business we want to build — one where the people connected to Kenya's coffee economy can have a genuine stake in its future. Our approach to community reinvestment is being shaped through dialogue with farmers and the communities we work alongside.",
+      "6_step": "06 — OUR NAME",
+      "6_title": "A NAME OF OUR OWN.",
+      "6_text1": "Kilolua is an invented name. We created it to evoke the Kikuyu heartlands where much of Kenya's finest coffee grows, the warmth and layered history of the communities around us, and the family connections that stretch from Kenya to Europe and Australia.",
+      "6_text2": "It carries something of the rhythm of Swahili and the texture of the highlands — rooted, unhurried and distinctly ours. A name we made. A business that belongs.",
+      "7_step": "07 — THE FUTURE",
+      "7_title": "BUILT TO LAST.",
+      "7_text1": "Kilolua is being built for long-term relationships, not short-term transactions.",
+      "7_text2": "We are growing a network of farmers, cooperatives, specialty roasters and importers who believe that knowing where coffee comes from makes the coffee — and the business behind it — better. From Kenya's highlands to roasteries around the world, we are building something worth being part of."
+    }
+  },
+  "production": {
+    "hero_title": "FROM CHERRY<br/>TO SHIPMENT",
+    "hero_desc": "The journey of Kenyan coffee — grown, selected, processed and prepared for the world.",
+    "cta_title": "THE JOURNEY CONTINUES.",
+    "cta_desc": "From Kenyan soil to the world's specialty roasteries.",
+    "steps": {
+      "1_step": "01 — GROWING",
+      "1_title": "WHERE IT BEGINS",
+      "1_text1": "Every Kilolua coffee begins with farmers cultivating Arabica in Kenya's highland regions. Murang'a, Nyeri and Kirinyaga offer the altitude, volcanic soils and climate that create the conditions for distinctive specialty coffee.",
+      "1_text2": "We work with farmers and cooperatives at origin, building relationships that allow us to understand not only the coffee, but the people and places behind each lot.",
+      "2_step": "02 — HARVEST",
+      "2_title": "PICKED WITH PURPOSE",
+      "2_text1": "Coffee cherries are carefully harvested when they reach the right stage of ripeness. Selective harvesting helps ensure that only suitable cherries enter the production process, protecting the quality and character of the final lot.",
+      "2_text2": "The result begins in the field: better selection at harvest creates a stronger foundation for everything that follows.",
+      "3_step": "03 — PROCESSING",
+      "3_title": "CHARACTER, UNVEILED",
+      "3_text1": "Processing plays a defining role in the character of a coffee. Kilolua offers fully washed, natural and honey-processed lots, each revealing different expressions of the coffee's origin and variety.",
+      "3_text2": "From carefully selected cherries to dried and prepared green beans, every stage is handled with attention to quality and consistency.",
+      "4_step": "04 — SELECTION",
+      "4_title": "QUALITY, LOT BY LOT",
+      "4_text1": "Once processed and prepared, coffee is assessed and selected according to quality, origin, variety and lot characteristics.",
+      "4_text2": "Our focus is not simply on moving volume. We seek coffees with a story worth knowing — traceable back to their growing region, cooperative or farm, and consistent enough for specialty buyers to build relationships around.",
+      "5_step": "05 — EXPORT",
+      "5_title": "READY FOR THE WORLD",
+      "5_text1": "From origin to destination, green coffee export is a logistics business as much as it is a trading business.",
+      "5_text2": "Kilolua brings more than two decades of supply-chain, procurement and export-management experience in East Africa. We coordinate documentation, customs compliance and logistics to move coffee reliably from Kenya to specialty roasters and importers across the UK, Europe, Australia and Asia.",
+      "6_step": "06 — ROASTERY",
+      "6_title": "FROM KENYA. TO YOUR CUP.",
+      "6_text1": "The journey ends at the roastery — but the story continues in every cup.",
+      "6_text2": "We connect specialty buyers with Kenyan green coffee that carries its origin, character and journey with it. From highland farms to roasteries around the world, Kilolua exists to make that connection meaningful."
+    }
+  }
+}

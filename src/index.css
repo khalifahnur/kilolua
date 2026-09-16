@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Caveat:wght@400..700&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --color-sand: #e4decb;
+  --color-royal-red: #ba172a;
+  --color-royal-navy: #111a30;
+  --font-playfair: "Playfair Display", serif;
+  --font-caveat: "Caveat", cursive;
+  --font-lora: "Lora", serif;
+}
+
+@layer base {
+  html,
+  body {
+    @apply antialiased bg-sand text-royal-navy font-lora overflow-x-hidden;
+  }
+  
+  body {
+    background-color: var(--color-sand);
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.08'/%3E%3C/svg%3E");
+  }
+}
+
+/* Wavy transitions */
+.wave-top-red {
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.wave-top-red svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 60px;
+}
+
+@media (min-width: 768px) {
+  .wave-top-red svg {
+    height: 120px;
+  }
+}
+
+.wave-bottom-red {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.wave-bottom-red svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 60px;
+}
+
+@media (min-width: 768px) {
+  .wave-bottom-red svg {
+    height: 120px;
+  }
+}
+
+/* Distressed SVG Filter for text/logos */
+.distressed {
+  filter: url(#distress-filter);
+}
+
