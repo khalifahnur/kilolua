@@ -10,7 +10,7 @@ const steps = [
   {
     title: "FARM",
     desc: "Coffee begins with the farmers and communities who cultivate it.",
-    img: "https://images.unsplash.com/photo-1511556820780-d912e42b4980?q=80&w=800&auto=format&fit=crop",
+    img: "https://images.unsplash.com/photo-1611162458324-aae1eb4129a4?q=80&w=800&auto=format&fit=crop",
   },
   {
     title: "COOPERATIVE",
