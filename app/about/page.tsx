@@ -169,7 +169,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* STADIPASS SECTION */}
       <motion.section 
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -217,8 +216,6 @@ export default function AboutPage() {
           </div>
         </div>
       </motion.section>
-
-      {/* FAQ SECTION */}
       <motion.section 
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
