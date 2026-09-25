@@ -24,7 +24,6 @@ export default function ContactDrawer() {
             onClick={() => setIsOpen(false)}
           />
 
-          {/* Drawer */}
           <motion.div
             initial={{ y: "100%" }}
             animate={{ y: 0 }}
@@ -36,7 +35,7 @@ export default function ContactDrawer() {
           >
             <button 
               onClick={() => setIsOpen(false)}
-              className="absolute -top-6 right-6 md:-top-2 md:right-12 w-16 h-16 md:w-20 md:h-20 bg-sand rounded-full flex items-center justify-center z-50 hover:scale-105 transition-transform cursor-pointer"
+              className="absolute top-0 right-6  md:right-12 w-16 h-16 md:w-20 md:h-20 bg-sand rounded-full flex items-center justify-center z-50 hover:scale-105 transition-transform cursor-pointer"
               style={{ boxShadow: "0px -4px 20px rgba(0,0,0,0.15), 0px 10px 20px rgba(0,0,0,0.1)" }}
             >
               <X className="w-8 h-8 md:w-10 md:h-10 text-royal-red" strokeWidth={2.5} />
@@ -46,7 +45,7 @@ export default function ContactDrawer() {
                 <div className="w-full lg:w-[105%] xl:w-[110%] bg-royal-red pt-10 md:pt-12 lg:pt-16 px-8 md:px-16 lg:px-20 pb-16 lg:pb-24 rounded-t-[40px] lg:rounded-tr-none relative self-start z-20">
                   <div className="flex flex-col sm:flex-row gap-8 lg:gap-16">
                     <div className="flex-1">
-                      <h3 className="font-playfair text-4xl lg:text-5xl text-sand tracking-wide mb-3">ADRESA</h3>
+                      <h3 className="font-playfair text-4xl lg:text-5xl text-sand tracking-wide mb-3">ADDRESS</h3>
                       <div className="text-sand/90 text-sm lg:text-base leading-relaxed font-medium">
                         <p>Lycan International</p>
                         <p>Nairobi, Kenya</p>

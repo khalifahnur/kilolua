@@ -40,7 +40,7 @@ export default function Footer() {
     { name: t("nav.traceability"), key: "TRACEABILITY" },
     { name: t("nav.our_coffee"), key: "OUR COFFEE" },
     { name: t("nav.our_team"), key: "OUR TEAM" },
-    { name: t("nav.get_in_touch"), key: "GET IN TOUCH" },
+
   ];
 
   return (
@@ -84,6 +84,8 @@ export default function Footer() {
                       : link.key === "TRACEABILITY"
                         ? "/traceability"
                         : link.key === "ABOUT"
+                          ? "/about"
+                          :link.key === "OUR TEAM"
                           ? "/about"
                           : `#${link.key.toLowerCase().replace(/ /g, "-")}`
                 }

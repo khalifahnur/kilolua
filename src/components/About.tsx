@@ -20,8 +20,6 @@ export default function About() {
 
   return (
     <section className="relative w-full py-20 px-6 md:px-12 max-w-[1600px] mx-auto flex flex-col md:flex-row items-center justify-between">
-      
-      {/* Text Content */}
       <motion.div 
         variants={containerVariants}
         initial="hidden"
