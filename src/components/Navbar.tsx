@@ -62,7 +62,7 @@ export default function Navbar() {
 
         <div className="flex items-center gap-2 sm:gap-3">
           <Link
-            href="/#"
+            href="https://www.stadipass.com"
             className="group inline-flex items-center gap-1.5 sm:gap-2 bg-royal-navy hover:bg-blue-800 text-white font-medium text-xs sm:text-sm px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full transition-all duration-200 shadow-sm hover:shadow active:scale-95"
           >
             <span>StadiPass</span>
