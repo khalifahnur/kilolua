@@ -169,53 +169,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <motion.section 
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8 }}
-        className="py-24 px-8 md:px-16 max-w-[1400px] mx-auto"
-      >
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          <div className="lg:col-span-3">
-            <h2 className="font-['Playfair_Display',_serif] text-[#111a30] text-4xl md:text-5xl leading-[1.1] mb-12">
-              {t("about.stadipass.title", "Expanding our reach with Stadipass.")}
-            </h2>
-            <div className="font-['Playfair_Display',_serif] text-[#ba172a] text-4xl mb-2">
-              45K+
-            </div>
-            <div 
-              className="text-sm text-[#111a30] font-medium leading-tight"
-              dangerouslySetInnerHTML={{ __html: t("about.stadipass.tickets", "Tickets<br/>Processed") }}
-            />
-          </div>
 
-          <div className="lg:col-span-5 flex justify-center">
-            <img
-              src="/stadipass.png"
-              alt="stadipass platform"
-              className="w-full h-full object-cover rounded-2xl shadow-sm"
-            />
-          </div>
-
-          <div className="lg:col-span-4 space-y-8">
-            <div className="flex items-start gap-4">
-              <CheckCircle2 size={24} className="text-[#ba172a] shrink-0 mt-1" />
-              <p 
-                className="text-gray-700 leading-relaxed font-['Lora',_serif]"
-                dangerouslySetInnerHTML={{ __html: t("about.stadipass.bullet1", "<span class='font-bold text-[#111a30]'>Seamless event ticketing platform</span> bringing the same technological rigor we apply to supply chains directly to the experiences sector.") }}
-              />
-            </div>
-            <div className="flex items-start gap-4">
-              <CheckCircle2 size={24} className="text-[#ba172a] shrink-0 mt-1" />
-              <p 
-                className="text-gray-700 leading-relaxed font-['Lora',_serif]"
-                dangerouslySetInnerHTML={{ __html: t("about.stadipass.bullet2", "<span class='font-bold text-[#111a30]'>Users rate their Stadipass experience 4.9 out of 5</span>, proof that complex logistical systems can scale while feeling simple.") }}
-              />
-            </div>
-          </div>
-        </div>
-      </motion.section>
       <motion.section 
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
