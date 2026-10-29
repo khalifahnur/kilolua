@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { motion, Variants } from "motion/react";
 import { ArrowRight, ArrowLeft } from "lucide-react";
 import Link from "next/link";
@@ -9,14 +9,42 @@ import { coffeeProfiles } from "../data/coffeeProfiles";
 const CoffeeModel = dynamic(() => import("./CoffeeModel"), {
   ssr: false,
   loading: () => (
-    <div className="absolute inset-0 flex items-center justify-center text-white/50">
-      Loading 3D...
+    <div className="absolute inset-0 flex items-center justify-center text-white/50" aria-hidden="true">
+      …
     </div>
   ),
 });
 
+/** Tracks whether an element is near the viewport so heavy work (WebGL) can wait for it and pause when it leaves. */
+function useNearViewport<T extends Element>(margin = "300px") {
+  const ref = useRef<T>(null);
+  const [near, setNear] = useState(false);
+  const [everNear, setEverNear] = useState(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el || typeof IntersectionObserver === "undefined") {
+      setNear(true);
+      setEverNear(true);
+      return;
+    }
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setNear(entry.isIntersecting);
+        if (entry.isIntersecting) setEverNear(true);
+      },
+      { rootMargin: margin },
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [margin]);
+
+  return { ref, near, everNear };
+}
+
 export default function Products() {
   const { t } = useTranslation();
+  const { ref: modelRef, near: modelNear, everNear: modelEverNear } = useNearViewport<HTMLDivElement>();
   const profilesArray = Object.values(coffeeProfiles);
   const [currentIndex, setCurrentIndex] = useState(0);
   const currentCoffee = profilesArray[currentIndex];
@@ -62,13 +90,7 @@ export default function Products() {
       id="products"
       className="relative w-full pt-10 pb-32 md:pt-20 md:pb-20 bg-royal-red text-sand overflow-hidden"
     >
-      <div
-        className="absolute inset-0 pointer-events-none opacity-20"
-        style={{
-          backgroundImage:
-            "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E\")",
-        }}
-      ></div>
+      <div className="noise-overlay" aria-hidden="true" />
 
       <div className="wave-top-red">
         <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -122,17 +144,8 @@ export default function Products() {
         </div>
 
         <div className="relative w-full max-w-[1000px] mt-24 md:mt-16 flex flex-col md:flex-row justify-center items-center">
-          <motion.div
-            key={`text-${currentCoffee.slug}`}
-            initial="hidden"
-            animate="visible"
-            variants={itemVariants}
-            className="md:absolute left-0 top-[30%] z-30 flex flex-col items-start mb-12 md:mb-0 bg-royal-red/0 backdrop-blur-none p-4 md:p-0"
-          ></motion.div>
-
           <div className="relative z-10 flex justify-center items-center">
             <motion.div
-              key={`can-${currentCoffee.slug}`}
               initial="hidden"
               animate="visible"
               variants={scaleVariants}
@@ -140,21 +153,29 @@ export default function Products() {
             >
               <div className="flex-1 w-full h-full flex flex-col items-center justify-start mt-12">
                 {/* 1. Text is placed normally at the top */}
-                <span className="font-caveat font-bold text-[70px] md:text-[100px] text-white -rotate-12 leading-none drop-shadow-md px-2 text-center mb-4">
+                <motion.span
+                  key={currentCoffee.slug}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, ease: "easeOut" }}
+                  className="font-caveat font-bold text-[70px] md:text-[100px] text-white -rotate-12 leading-none drop-shadow-md px-2 text-center mb-4"
+                >
                   {currentCoffee.name}
-                </span>
+                </motion.span>
 
                 {/* 2. 3D model sits below the text, taking up the remaining space */}
-                <div className="w-full flex-1 min-h-[250px] relative z-10 cursor-grab active:cursor-grabbing">
-                  <CoffeeModel />
+                <div
+                  ref={modelRef}
+                  role="img"
+                  aria-label="Interactive 3D model of a Kenyan coffee bean"
+                  className="w-full flex-1 min-h-[250px] relative z-10 cursor-grab active:cursor-grabbing"
+                >
+                  {/* The WebGL scene (and its 2 MB model) loads only once the section is near the screen. */}
+                  {modelEverNear && <CoffeeModel active={modelNear} />}
                 </div>
               </div>
             </motion.div>
 
-            <motion.div
-              variants={itemVariants}
-              className="absolute left-[50%] top-[10%] w-[250px] md:w-[400px] z-30 pointer-events-none drop-shadow-2xl"
-            ></motion.div>
           </div>
         </div>
 
@@ -163,13 +184,17 @@ export default function Products() {
           className="flex gap-10 mt-20 z-20 cursor-pointer"
         >
           <button
+            type="button"
             onClick={handlePrev}
+            aria-label="Previous coffee"
             className="text-white hover:text-gray-200 transition-transform hover:-translate-x-2"
           >
             <ArrowLeft size={56} strokeWidth={1} />
           </button>
           <button
+            type="button"
             onClick={handleNext}
+            aria-label="Next coffee"
             className="text-white hover:text-gray-200 transition-transform hover:translate-x-2"
           >
             <ArrowRight size={56} strokeWidth={1} />

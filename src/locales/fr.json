@@ -15,7 +15,10 @@
     "contact": "Contact",
     "privacy": "Politique de confidentialité",
     "terms": "Conditions générales",
-    "rights": "© 2026 KILOLUA. Tous droits réservés."
+    "rights": "© 2026 KILOLUA. Tous droits réservés.",
+    "email": "E-mail",
+    "phone": "Téléphone",
+    "tagline": "Café vert du Kenya traçable, négocié avec but."
   },
   "landing": {
     "hero": {
@@ -51,7 +54,7 @@
     },
     "brands": {
       "subtitle": "Collaboration & Croissance",
-      "title": "Devenez Partenaire de <br className=\"md:hidden\" />Kilolua",
+      "title": "Devenez Partenaire de <br class=\"md:hidden\" />Kilolua",
       "buyer": "Je suis Acheteur de Café",
       "farmer": "Je suis Agriculteur / Coopérative",
       "exit": "SORTIE"
@@ -96,7 +99,20 @@
     "intro_desc": "Chaque lot Kilolua commence par une origine connue. Nous travaillons avec des agriculteurs et des coopératives dans les hauts plateaux producteurs de café du Kenya, gardant le voyage visible depuis la source, à travers le traitement, l'exportation, et finalement jusqu'à la brûlerie.",
     "featured_title": "CHAQUE LOT A UNE<br/>HISTOIRE",
     "featured_desc": "De la ferme et de la coopérative à la transformation, l'exportation et la brûlerie, Kilolua s'efforce de garder visible le voyage du café kényan. La traçabilité n'est pas une caractéristique supplémentaire — elle fait partie de notre façon de commercer.",
-    "map_desc": "Notre café commence dans les hauts plateaux du Kenya, où nous travaillons avec des agriculteurs et des coopératives dans des régions telles que Murang'a, Nyeri et Kirinyaga. Chaque origine apporte son propre caractère. Depuis ces régions productrices, Kilolua relie le café vert kényan traçable avec des acheteurs de spécialité du monde entier."
+    "map_desc": "Notre café commence dans les hauts plateaux du Kenya, où nous travaillons avec des agriculteurs et des coopératives dans des régions telles que Murang'a, Nyeri et Kirinyaga. Chaque origine apporte son propre caractère. Depuis ces régions productrices, Kilolua relie le café vert kényan traçable avec des acheteurs de spécialité du monde entier.",
+    "steps": {
+      "farm_title": "EXPLOITATION",
+      "farm_desc": "Le café commence avec les producteurs et les communautés qui le cultivent.",
+      "cooperative_title": "COOPÉRATIVE",
+      "cooperative_desc": "Nous nouons des relations directes avec les coopératives et les groupes de producteurs à l’origine.",
+      "lot_title": "LOT",
+      "lot_desc": "Chaque lot porte sa propre identité, son profil de qualité, sa méthode de traitement et l’histoire de son origine.",
+      "export_title": "EXPORT",
+      "export_desc": "Documents, logistique et douanes sont gérés en toute transparence, du Kenya jusqu’à la destination.",
+      "roastery_title": "TORRÉFACTION",
+      "roastery_desc": "Le voyage s’achève chez des torréfacteurs spécialisés qui savent d’où vient leur café."
+    },
+    "map_label": "Carte des routes du café Kilolua du Kenya vers la France, l’Angleterre, l’Allemagne et l’Australie"
   },
   "coffee_exp": {
     "back": "← RETOUR AU CATALOGUE"
@@ -167,6 +183,93 @@
       "6_title": "DU KENYA. À VOTRE TASSE.",
       "6_text1": "Le voyage se termine à la brûlerie — mais l'histoire continue dans chaque tasse.",
       "6_text2": "Nous mettons en relation des acheteurs de spécialité avec du café vert kényan qui porte son origine, son caractère et son voyage avec lui. Des fermes des hauts plateaux aux brûleries du monde entier, Kilolua existe pour rendre cette connexion significative."
+    }
+  },
+  "contact_form": {
+    "title": "Contactez-nous",
+    "type_label": "Je suis",
+    "type_buyer": "Acheteur de café",
+    "type_farmer": "Agriculteur / coopérative vendant du café",
+    "intro_buyer": "Dites-nous ce que vous recherchez et nous reviendrons vers vous avec les lots disponibles, des échantillons et des prix.",
+    "intro_farmer": "Parlez-nous de votre exploitation ou coopérative et de votre café, et notre équipe vous contactera pour envisager une collaboration.",
+    "name": "Nom complet",
+    "email": "E-mail",
+    "phone": "Numéro de téléphone (facultatif)",
+    "company": "Entreprise / torréfacteur",
+    "interest": "Café recherché",
+    "interest_any": "Pas encore décidé",
+    "volume_buyer": "Volume annuel estimé (ex. 1 conteneur)",
+    "destination": "Pays de destination",
+    "farm_name": "Nom de l’exploitation / coopérative",
+    "location": "Lieu (comté / région)",
+    "variety": "Variété principale cultivée",
+    "variety_other": "Autre / ne sait pas",
+    "processing": "Méthode de traitement",
+    "processing_washed": "Entièrement lavé",
+    "processing_natural": "Nature",
+    "processing_honey": "Honey",
+    "processing_unsure": "Ne sait pas",
+    "volume_farmer": "Volume attendu par récolte (kg)",
+    "message_buyer": "Votre message",
+    "message_farmer": "Parlez-nous de votre café",
+    "consent": "J’accepte la",
+    "privacy_link": "Politique de confidentialité",
+    "submit": "ENVOYER",
+    "sending": "ENVOI…",
+    "success_title": "Merci !",
+    "success_body": "Votre message est bien arrivé à l’équipe Kilolua. Nous répondrons à l’adresse e-mail que vous avez indiquée.",
+    "send_another": "Envoyer un autre message",
+    "error_generic": "Désolé, nous n’avons pas pu envoyer votre message. Veuillez réessayer ou nous écrire directement à",
+    "error_rate_limited": "Trop de messages envoyés en peu de temps. Veuillez patienter quelques minutes ou nous écrire directement à",
+    "err_required": "Ce champ est obligatoire",
+    "err_invalid": "Veuillez vérifier ce champ",
+    "err_too_long": "Ce texte est trop long",
+    "address": "Adresse",
+    "phone_heading": "Téléphone",
+    "email_heading": "E-mail",
+    "close": "Fermer le formulaire de contact"
+  },
+  "contact_page": {
+    "title": "CONTACTEZ-NOUS",
+    "subtitle": "Vous achetez du café kényan, ou vous le cultivez ? Nous serions ravis d’échanger avec vous.",
+    "hours": "Nous répondons à chaque demande dès que possible."
+  },
+  "about": {
+    "story_title": "NOTRE HISTOIRE",
+    "story_subtitle": "Pour Kilolua, une bonne tasse de café raconte une histoire plus vaste : celle des personnes qui l’ont cultivé, du lieu dont il vient et de la valeur qui peut retourner à sa communauté.",
+    "story_desc": "Kilolua est née comme une entreprise familiale animée par une conviction simple : des relations solides et une livraison fiable peuvent créer une valeur durable. Fondée au Kenya par Christine et Gordon Denoon, l’entreprise a bâti son expérience en reliant personnes, marchandises et marchés grâce à l’approvisionnement et à la logistique. Aujourd’hui, cette expérience guide le nouveau chapitre de Kilolua dans le café. Le café kényan porte dans chaque tasse le travail des petits producteurs. Kilolua souhaite que ce travail soit davantage reconnu et valorisé, en particulier la contribution des femmes. Son approche du café, en développement, commence à la ferme : bâtir des relations responsables avec les producteurs, préserver la qualité tout au long de la chaîne d’approvisionnement et relier l’origine du café aux acheteurs soucieux de la manière dont il a été cultivé. Entreprise familiale kényane liée à l’Afrique, à l’Europe et à l’Australie, Kilolua apporte à cette ambition une compréhension locale et une vision internationale. Elle explore des moyens d’ajouter de la valeur par la qualité, la traçabilité et l’accès aux marchés, tout en gardant les moyens de subsistance des producteurs et le soin de l’environnement au cœur de ses décisions.",
+    "team_title": "LES PERSONNES DERRIÈRE KILOLUA",
+    "mission_statement": "Enracinés au Kenya. Connectés au monde. Une seule mission.",
+    "contact_btn": "Contactez-nous",
+    "faq_title": "Questions fréquentes",
+    "faq_desc": "Notre FAQ répond à l’essentiel pour vous offrir clarté et confiance avant de vous associer à nous.",
+    "team": {
+      "gladys_title": "Directrice financière",
+      "gladys_desc": "Gladys dirige la gestion financière, les contrôles et la supervision commerciale.",
+      "ian_title": "Systèmes et numérique",
+      "ian_desc": "Ian dirige le développement des systèmes, les capacités numériques et le marketing.",
+      "jane_title": "Liaison région de Murang’a",
+      "jane_desc": "Jane assure le lien essentiel de Kilolua avec les communautés productrices de café.",
+      "christine_title": "Cofondatrice et responsable stratégique",
+      "christine_desc": "Christine pilote la stratégie globale, la gouvernance et le développement commercial de Kilolua.",
+      "gordon_title": "Cofondateur et durabilité",
+      "gordon_desc": "Gordon dirige les initiatives de durabilité et de développement.",
+      "brian_rose_title": "Marché européen",
+      "brian_rose_desc": "Brian et Rose dirigent le développement de Kilolua sur le marché français.",
+      "lily_title": "Marché australien",
+      "lily_desc": "Lily dirige la prospection et le développement des relations en Australie."
+    },
+    "faqs": {
+      "q1": "Qu’est-ce qui distingue Kilolua des autres fournisseurs ?",
+      "a1": "Notre équipe donne à Kilolua une présence inhabituelle, de la ferme au marché, reliant directement les communautés de petits producteurs aux marchés internationaux.",
+      "q2": "Qu’est-ce que Stadipass ?",
+      "a2": "Stadipass est notre plateforme de billetterie récemment lancée, qui apporte le même niveau d’expertise en chaîne d’approvisionnement et de capacité technologique au secteur de l’événementiel et des expériences.",
+      "q3": "Comment garantissez-vous la durabilité ?",
+      "a3": "Nous nous attachons à construire des modèles commercialement viables qui génèrent une valeur économique et sociale mesurable pour nos communautés productrices de café.",
+      "q4": "Puis-je demander un café d’une région précise ?",
+      "a4": "Oui, nos solides relations locales nous permettent de sélectionner des lots très précis et traçables dans tout le Kenya.",
+      "q5": "Où Kilolua est-elle basée ?",
+      "a5": "Des membres de notre équipe sont présents au Kenya, en France et en Australie, pour une activité véritablement mondiale et pourtant ancrée localement."
     }
   }
 }

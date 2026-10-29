@@ -1,14 +1,16 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { motion } from 'motion/react';
 
 export default function Preloader({ onComplete }: { onComplete: () => void }) {
   const [progress, setProgress] = useState(0);
+  const onCompleteRef = useRef(onComplete);
+  onCompleteRef.current = onComplete;
 
   useEffect(() => {
     // Lock scroll on mount
     document.body.style.overflow = 'hidden';
     
-    const duration = 2500; // 2.5 seconds to load
+    const duration = 1400;
     const intervalTime = 30;
     const steps = duration / intervalTime;
     const increment = 100 / steps;
@@ -33,28 +35,25 @@ export default function Preloader({ onComplete }: { onComplete: () => void }) {
   useEffect(() => {
     if (progress >= 100) {
       const timeout = setTimeout(() => {
-        onComplete();
-      }, 500); // slight pause at 100 before triggering exit
+        onCompleteRef.current();
+      }, 250); // slight pause at 100 before triggering exit
       return () => clearTimeout(timeout);
     }
-  }, [progress, onComplete]);
+  }, [progress]);
 
   const word = "KILOLUA";
   const letters = word.split("");
 
   return (
     <motion.div
-      className="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-sand text-[#3b3b3b]"
+      className="preloader fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-sand text-[#3b3b3b]"
       initial={{ y: 0 }}
       exit={{ 
         y: "-100vh", 
-        transition: { duration: 1, ease: [0.76, 0, 0.24, 1] } 
+        transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1] } 
       }}
     >
-      <div 
-              className="absolute inset-0 pointer-events-none opacity-20"
-              style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E\")" }}
-            />
+      <div className="noise-overlay" aria-hidden="true" />
       {/* Main Waving Text */}
       <div className="flex overflow-visible relative">
         {letters.map((letter, index) => (

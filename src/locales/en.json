@@ -15,7 +15,10 @@
     "contact": "Contact",
     "privacy": "Privacy Policy",
     "terms": "Terms & Conditions",
-    "rights": "© 2026 KILOLUA. All Rights Reserved."
+    "rights": "© 2026 KILOLUA. All Rights Reserved.",
+    "email": "Email",
+    "phone": "Phone",
+    "tagline": "Traceable Kenyan green coffee, traded with purpose."
   },
   "landing": {
     "hero": {
@@ -51,7 +54,7 @@
     },
     "brands": {
       "subtitle": "Collaboration & Growth",
-      "title": "Partner With <br className=\"md:hidden\" />Kilolua",
+      "title": "Partner With <br class=\"md:hidden\" />Kilolua",
       "buyer": "I'm a Coffee Buyer",
       "farmer": "I'm a Farmer / Cooperative",
       "exit": "EXIT"
@@ -96,7 +99,20 @@
     "intro_desc": "Every Kilolua lot begins with a known origin. We work with farmers and cooperatives across Kenya's coffee-growing highlands, keeping the journey visible from source through processing, export, and ultimately to the roastery.",
     "featured_title": "EVERY LOT HAS A<br/>STORY",
     "featured_desc": "From farm and cooperative to processing, export and roastery, Kilolua works to keep the journey of Kenyan coffee visible. Traceability is not an added feature — it is part of how we trade.",
-    "map_desc": "Our coffee begins in Kenya's highlands, where we work with farmers and cooperatives across regions including Murang'a, Nyeri and Kirinyaga. Each origin contributes its own character. From these growing regions, Kilolua connects traceable Kenyan green coffee with specialty buyers across the world."
+    "map_desc": "Our coffee begins in Kenya's highlands, where we work with farmers and cooperatives across regions including Murang'a, Nyeri and Kirinyaga. Each origin contributes its own character. From these growing regions, Kilolua connects traceable Kenyan green coffee with specialty buyers across the world.",
+    "steps": {
+      "farm_title": "FARM",
+      "farm_desc": "Coffee begins with the farmers and communities who cultivate it.",
+      "cooperative_title": "COOPERATIVE",
+      "cooperative_desc": "We build direct relationships with cooperatives and grower groups at origin.",
+      "lot_title": "LOT",
+      "lot_desc": "Each lot carries its own identity, quality profile, processing method and origin story.",
+      "export_title": "EXPORT",
+      "export_desc": "Documentation, logistics and customs are managed with transparency from Kenya to destination.",
+      "roastery_title": "ROASTERY",
+      "roastery_desc": "The journey ends with specialty roasters who know where their coffee came from."
+    },
+    "map_label": "Map of Kilolua's coffee routes from Kenya to France, England, Germany and Australia"
   },
   "coffee_exp": {
     "back": "← BACK TO CATALOG"
@@ -167,6 +183,93 @@
       "6_title": "FROM KENYA. TO YOUR CUP.",
       "6_text1": "The journey ends at the roastery — but the story continues in every cup.",
       "6_text2": "We connect specialty buyers with Kenyan green coffee that carries its origin, character and journey with it. From highland farms to roasteries around the world, Kilolua exists to make that connection meaningful."
+    }
+  },
+  "contact_form": {
+    "title": "Get in touch",
+    "type_label": "I am a",
+    "type_buyer": "Coffee buyer",
+    "type_farmer": "Farmer / cooperative selling coffee",
+    "intro_buyer": "Tell us what you are looking for and we will come back with available lots, samples and pricing.",
+    "intro_farmer": "Tell us about your farm or cooperative and your coffee, and our team will be in touch about working together.",
+    "name": "Full name",
+    "email": "Email",
+    "phone": "Phone number (optional)",
+    "company": "Company / roastery",
+    "interest": "Coffee of interest",
+    "interest_any": "Not sure yet",
+    "volume_buyer": "Estimated annual volume (e.g. 1 container)",
+    "destination": "Destination country",
+    "farm_name": "Farm / cooperative name",
+    "location": "Location (county / region)",
+    "variety": "Main variety grown",
+    "variety_other": "Other / not sure",
+    "processing": "Processing method",
+    "processing_washed": "Fully washed",
+    "processing_natural": "Natural",
+    "processing_honey": "Honey",
+    "processing_unsure": "Not sure",
+    "volume_farmer": "Expected volume per harvest (kg)",
+    "message_buyer": "Your message",
+    "message_farmer": "Tell us about your coffee",
+    "consent": "I agree to the",
+    "privacy_link": "Privacy Policy",
+    "submit": "SUBMIT",
+    "sending": "SENDING…",
+    "success_title": "Thank you!",
+    "success_body": "Your message has reached the Kilolua team. We will reply to the email address you provided.",
+    "send_another": "Send another message",
+    "error_generic": "Sorry, we could not send your message just now. Please try again, or email us directly at",
+    "error_rate_limited": "Too many messages sent in a short time. Please wait a few minutes and try again, or email us directly at",
+    "err_required": "This field is required",
+    "err_invalid": "Please check this field",
+    "err_too_long": "This is too long",
+    "address": "Address",
+    "phone_heading": "Phone",
+    "email_heading": "Email",
+    "close": "Close contact form"
+  },
+  "contact_page": {
+    "title": "CONTACT US",
+    "subtitle": "Buying Kenyan coffee, or growing it? We would love to hear from you.",
+    "hours": "We reply to every enquiry as soon as we can."
+  },
+  "about": {
+    "story_title": "OUR STORY",
+    "story_subtitle": "For Kilolua, a good cup of coffee tells a bigger story: of the people who grew it, the place it came from, and the value that can return to its community.",
+    "story_desc": "Kilolua began as a family business with a simple belief: strong relationships and reliable delivery can create lasting value. Founded in Kenya by Christine and Gordon Denoon, the company built its experience connecting people, goods and markets through procurement and logistics. Today, that experience is guiding Kilolua’s next chapter in coffee. Kenyan coffee carries the work of small-scale farmers in every cup. Kilolua wants more of that work to be seen and valued, especially the contribution of women. Its developing coffee approach starts at the farm: building responsible relationships with producers, protecting quality as coffee moves through the supply chain, and helping connect its origin to buyers who care about how it was grown. As a family-owned Kenyan company with connections across Africa, Europe and Australia, Kilolua brings a local understanding and an international outlook to that ambition. It is exploring ways to add value through quality, traceability and market access, while keeping farmer livelihoods and environmental care at the heart of its decisions.",
+    "team_title": "THE PEOPLE BEHIND KILOLUA",
+    "mission_statement": "Rooted in Kenya. Connected globally. One mission.",
+    "contact_btn": "Contact us",
+    "faq_title": "Common Questions & Answers",
+    "faq_desc": "Our FAQ is here to answer what matters most, giving you clarity and confidence before you partner with us.",
+    "team": {
+      "gladys_title": "Chief Financial Officer",
+      "gladys_desc": "Gladys leads financial management, controls and commercial oversight.",
+      "ian_title": "Systems & Digital",
+      "ian_desc": "Ian leads systems development, digital capability and marketing.",
+      "jane_title": "Murang’a Region Liaison",
+      "jane_desc": "Jane provides Kilolua’s critical connection to coffee-growing communities.",
+      "christine_title": "Co-Founder & Strategic Lead",
+      "christine_desc": "Christine leads Kilolua’s overall strategy, governance and commercial development.",
+      "gordon_title": "Co-Founder & Sustainability",
+      "gordon_desc": "Gordon is the sustainability and development initiatives lead.",
+      "brian_rose_title": "European Market",
+      "brian_rose_desc": "Brian and Rose lead Kilolua’s French market development.",
+      "lily_title": "Australia Market",
+      "lily_desc": "Lily leads market outreach and relationship development in Australia."
+    },
+    "faqs": {
+      "q1": "What makes Kilolua different from other suppliers?",
+      "a1": "Our team gives Kilolua an unusual farm-to-market footprint, connecting smallholder communities directly with international markets.",
+      "q2": "What is Stadipass?",
+      "a2": "Stadipass is our newly launched ticketing platform, bringing the same level of supply-chain expertise and technological capability to the event and experiences sector.",
+      "q3": "How do you ensure sustainability?",
+      "a3": "We focus on building commercially sustainable models that generate measurable economic and social value for our coffee-growing communities.",
+      "q4": "Can I request a specific regional coffee?",
+      "a4": "Yes, our strong local relationships allow us to source highly specific, traceable lots from across Kenya.",
+      "q5": "Where is Kilolua based?",
+      "a5": "We have team members positioned in Kenya, France, and Australia to ensure a truly global yet locally-rooted operation."
     }
   }
 }

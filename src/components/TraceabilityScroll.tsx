@@ -8,28 +8,23 @@ gsap.registerPlugin(ScrollTrigger);
 
 const steps = [
   {
-    title: "FARM",
-    desc: "Coffee begins with the farmers and communities who cultivate it.",
+    key: "farm",
     img: "https://images.unsplash.com/photo-1611162458324-aae1eb4129a4?q=80&w=800&auto=format&fit=crop",
   },
   {
-    title: "COOPERATIVE",
-    desc: "We build direct relationships with cooperatives and grower groups at origin.",
+    key: "cooperative",
     img: "https://images.unsplash.com/photo-1611162458324-aae1eb4129a4?q=80&w=800&auto=format&fit=crop",
   },
   {
-    title: "LOT",
-    desc: "Each lot carries its own identity, quality profile, processing method and origin story.",
+    key: "lot",
     img: "https://images.unsplash.com/photo-1628189871790-a7d0e4e5e40e?q=80&w=800&auto=format&fit=crop",
   },
   {
-    title: "EXPORT",
-    desc: "Documentation, logistics and customs are managed with transparency from Kenya to destination.",
+    key: "export",
     img: "https://images.unsplash.com/photo-1586528116311-ad8ed7c80a56?q=80&w=800&auto=format&fit=crop",
   },
   {
-    title: "ROASTERY",
-    desc: "The journey ends with specialty roasters who know where their coffee came from.",
+    key: "roastery",
     img: "https://images.unsplash.com/photo-1557006021-b85faa2bc5e2?q=80&w=800&auto=format&fit=crop",
   },
 ];
@@ -39,17 +34,19 @@ export default function TraceabilityScroll() {
   const { t } = useTranslation();
   useGSAP(
     () => {
-      const listItems = gsap.utils.toArray<HTMLLIElement>(".step-item");
-      const slides = gsap.utils.toArray<HTMLDivElement>(".slide-img");
-      const fill = document.querySelector(".progress-fill");
+      const root = containerRef.current;
+      const listItems = gsap.utils.toArray<HTMLLIElement>(".step-item", root);
+      const slides = gsap.utils.toArray<HTMLDivElement>(".slide-img", root);
+      // There is one progress bar for desktop and one for mobile; animate both.
+      const fill = gsap.utils.toArray<HTMLElement>(".progress-fill", root);
 
-      if (!listItems.length || !slides.length || !fill) return;
+      if (!root || !listItems.length || !slides.length || !fill.length) return;
 
       const scrollDistance = listItems.length * 80;
 
       const tl = gsap.timeline({
         scrollTrigger: {
-          trigger: ".pin-section",
+          trigger: root.querySelector(".pin-section"),
           start: "top top",
           end: `+=${scrollDistance}%`,
           pin: true,
@@ -179,13 +176,7 @@ export default function TraceabilityScroll() {
 
   return (
     <div ref={containerRef} className="w-full relative bg-sand pt-12 pb-24">
-      <div
-        className="absolute inset-0 pointer-events-none opacity-20"
-        style={{
-          backgroundImage:
-            "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E\")",
-        }}
-      />
+      <div className="noise-overlay" aria-hidden="true" />
       <section className="text-center max-w-3xl mx-auto px-6 mb-12 md:mb-16 bg-sand">
         {/* <h2 
                   className="font-playfair text-xl md:text-3xl lg:text-6xl text-royal-navy leading-[0.9] mb-8 distressed tracking-wide uppercase"
@@ -197,13 +188,7 @@ export default function TraceabilityScroll() {
         </p>
       </section>
       <section className="pin-section w-full h-screen min-h-[600px] flex justify-center items-center overflow-hidden relative z-20 bg-sand">
-        <div
-          className="absolute inset-0 pointer-events-none opacity-20"
-          style={{
-            backgroundImage:
-              "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E\")",
-          }}
-        />
+        <div className="noise-overlay" aria-hidden="true" />
         <div className="w-full max-w-[1200px] mx-auto flex flex-col md:flex-row px-6 md:px-12 relative h-full py-12 md:py-24">
           <div className="hidden md:block absolute left-12 top-[20%] bottom-[20%] w-[2px] bg-royal-navy/10 rounded-full overflow-hidden">
             <div className="progress-fill absolute top-0 left-0 w-full h-full bg-royal-red rounded-full"></div>
@@ -225,13 +210,13 @@ export default function TraceabilityScroll() {
                       {`0${index + 1}`}
                     </span>
                     <h3 className="step-title font-playfair font-bold text-3xl md:text-4xl lg:text-5xl m-0 tracking-wide uppercase text-royal-navy/30">
-                      {step.title}
+                      {t(`traceability.steps.${step.key}_title`)}
                     </h3>
                   </div>
 
                   <div className="step-desc-wrapper h-0 opacity-0 overflow-hidden ml-12 md:ml-16">
                     <p className="font-lora font-medium text-sm md:text-[17px] leading-relaxed text-royal-navy/80 max-w-sm m-0">
-                      {step.desc}
+                      {t(`traceability.steps.${step.key}_desc`)}
                     </p>
                   </div>
                 </li>
@@ -248,7 +233,11 @@ export default function TraceabilityScroll() {
                 >
                   <img
                     src={step.img}
-                    alt={step.title}
+                    alt={t(`traceability.steps.${step.key}_title`)}
+                    width={380}
+                    height={475}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover"
                   />
                 </div>

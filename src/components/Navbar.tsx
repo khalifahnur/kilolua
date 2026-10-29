@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "motion/react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useTranslation } from "react-i18next";
+import { openContact } from "../lib/contact";
 import Image from "next/image";
 
 export default function Navbar() {
@@ -43,6 +44,7 @@ export default function Navbar() {
           onClick={() => setIsOpen(true)}
           className="text-royal-navy hover:text-royal-red transition-colors p-1 "
           aria-label="Open menu"
+          aria-expanded={isOpen}
         >
           <Menu size={32} strokeWidth={1.5} className="w-8 h-8 sm:w-9 sm:h-9" />
         </button>
@@ -55,7 +57,8 @@ export default function Navbar() {
             src="/logo.png"
             width={90}
             height={90}
-            alt="kilolua logo"
+            alt="Kilolua logo"
+            priority
             className="w-16 h-auto md:w-20"
           />
         </Link>
@@ -63,6 +66,8 @@ export default function Navbar() {
         <div className="flex items-center gap-2 sm:gap-3">
           <Link
             href="https://www.stadipass.com"
+            target="_blank"
+            rel="noopener noreferrer"
             className="group inline-flex items-center gap-1.5 sm:gap-2 bg-royal-navy hover:bg-blue-800 text-white font-medium text-xs sm:text-sm px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full transition-all duration-200 shadow-sm hover:shadow active:scale-95"
           >
             <span>StadiPass</span>
@@ -92,26 +97,21 @@ export default function Navbar() {
             className="fixed inset-0 z-50 bg-royal-red flex flex-col justify-center px-6 md:px-24 h-[100dvh] overflow-hidden"
             data-lenis-prevent="true"
           >
-            <div
-              className="absolute inset-0 pointer-events-none opacity-20"
-              style={{
-                backgroundImage:
-                  "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E\")",
-              }}
-            ></div>
+            <div className="noise-overlay" aria-hidden="true" />
             <div className="absolute top-12 left-6 flex gap-6 text-sand font-lora text-sm font-bold md:hidden z-10 opacity-80">
               {/* <a href="#" className="hover:text-white transition-colors">IG</a>
               <a href="#" className="hover:text-white transition-colors">FB</a>
               <a href="#" className="hover:text-white transition-colors">IN</a> */}
             </div>
             <div className="absolute bottom-0 left-0 w-full overflow-hidden flex justify-center items-end pointer-events-none md:hidden z-0 translate-y-1/4">
-              <h1 className="font-playfair text-[25vw] leading-[0.7] text-sand/10 tracking-tighter whitespace-nowrap select-none">
+              <p aria-hidden="true" className="font-playfair text-[25vw] leading-[0.7] text-sand/10 tracking-tighter whitespace-nowrap select-none">
                 KILOLUA
-              </h1>
+              </p>
             </div>
 
             <button
               onClick={() => setIsOpen(false)}
+              aria-label="Close menu"
               className="absolute top-8 right-6 md:top-10 md:right-12 w-14 h-14 md:w-16 md:h-16 rounded-full bg-black/15 flex items-center justify-center text-sand hover:bg-black/25 transition-colors z-10"
             >
               <X size={32} strokeWidth={1.5} />
@@ -131,7 +131,7 @@ export default function Navbar() {
                       if (link.path === "/#contact") {
                         e.preventDefault();
                         setIsOpen(false);
-                        window.dispatchEvent(new Event("openContact"));
+                        openContact();
                       } else {
                         setIsOpen(false);
                       }
