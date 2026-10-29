@@ -1,10 +1,9 @@
 import { motion, Variants } from "motion/react";
-import { ArrowRight, ArrowUpRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import { useEffect, useState } from "react";
+import { openContact } from "../lib/contact";
 
 export default function Brands() {
-  const [isOpen, setIsOpen] = useState(false);
   const { t } = useTranslation();
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
@@ -23,35 +22,19 @@ export default function Brands() {
     },
   };
 
-  useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
-    return () => {
-      document.body.style.overflow = "";
-    };
-  }, [isOpen]);
-
   return (
     <section
       id="partner"
       className="relative w-full pt-20 pb-32 md:pt-32 md:pb-48 bg-royal-red text-sand overflow-hidden"
     >
-      <div
-        className="absolute inset-0 pointer-events-none opacity-20"
-        style={{
-          backgroundImage:
-            "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E\")",
-        }}
-      ></div>
+      <div className="noise-overlay" aria-hidden="true" />
 
       <div className="absolute top-[0px] left-0 w-full overflow-hidden leading-none z-20">
         <svg
           viewBox="0 0 1200 120"
           preserveAspectRatio="none"
           className="w-full h-[60px] md:h-[100px] lg:h-[140px]"
+          aria-hidden="true"
         >
           <defs>
             <pattern
@@ -61,7 +44,7 @@ export default function Brands() {
               height="120"
             >
               <image
-                href="/soil.png"
+                href="/soil.webp"
                 x="0"
                 y="0"
                 width="1200"
@@ -115,11 +98,10 @@ export default function Brands() {
           className="w-full max-w-[900px] mx-auto border-t-[1.5px] border-sand/30"
         >
           <motion.a
-            href="/#contact"
+            href="/contact"
             onClick={(e) => {
-                e.preventDefault();
-                setIsOpen(false);
-                window.dispatchEvent(new Event("openContact"));
+              e.preventDefault();
+              openContact("buyer");
             }}
             variants={itemVariants}
             className="group relative flex items-center justify-between py-8 md:py-12 border-b-[1.5px] border-sand/30 hover:bg-white transition-all duration-500 px-6 md:px-10 overflow-hidden"
@@ -136,11 +118,10 @@ export default function Brands() {
             />
           </motion.a>
           <motion.a
-            href="/#contact"
+            href="/contact"
             onClick={(e) => {
-                e.preventDefault();
-                setIsOpen(false);
-                window.dispatchEvent(new Event("openContact"));
+              e.preventDefault();
+              openContact("farmer");
             }}
             variants={itemVariants}
             className="group relative flex items-center justify-between py-8 md:py-12 border-b-[1.5px] border-sand/30 hover:bg-white transition-all duration-500 px-6 md:px-10 overflow-hidden"

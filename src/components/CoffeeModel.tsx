@@ -2,7 +2,7 @@
 
 import React, { Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';
-import { OrbitControls, useGLTF, Environment } from '@react-three/drei';
+import { OrbitControls, useGLTF, Environment, Lightformer } from '@react-three/drei';
 
 function Seed() {
   // Loads the model from the public folder
@@ -17,13 +17,28 @@ function Seed() {
   );
 }
 
-export default function CoffeeModel() {
+/**
+ * `active` pauses rendering while the model is off-screen, so the GPU is idle
+ * when the visitor is reading other sections.
+ */
+export default function CoffeeModel({ active = true }: { active?: boolean }) {
   return (
-    <Canvas camera={{ position: [0, 0, 5], fov: 45 }}>
+    <Canvas
+      camera={{ position: [0, 0, 5], fov: 45 }}
+      dpr={[1, 1.5]}
+      frameloop={active ? 'always' : 'never'}
+      gl={{ powerPreference: 'high-performance' }}
+    >
       {/* Lighting */}
       <ambientLight intensity={0.5} />
       <directionalLight position={[10, 10, 10]} intensity={1} />
-      <Environment preset="city" /> {/* Adds nice reflections/shadows */}
+      {/* Procedural studio lighting: gives the reflections without downloading an HDR from a CDN. */}
+      <Environment resolution={256}>
+        <Lightformer form="rect" intensity={2} position={[0, 5, -5]} scale={[10, 4, 1]} />
+        <Lightformer form="rect" intensity={1.5} position={[-5, 1, 2]} rotation-y={Math.PI / 2} scale={[8, 4, 1]} />
+        <Lightformer form="rect" intensity={1.5} position={[5, 1, 2]} rotation-y={-Math.PI / 2} scale={[8, 4, 1]} />
+        <Lightformer form="ring" intensity={1} color="#fff1dc" position={[0, 0, 6]} scale={6} />
+      </Environment>
       
       {/* Suspense is required while the GLB file loads */}
       <Suspense fallback={null}>

@@ -61,8 +61,12 @@ export default function About() {
           transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
           viewport={{ once: false }}
           src="/coffee-cup-seeds.png" 
-          alt="Coffee cup splashing with coffee beans" 
-          className="w-full max-w-[600px] object-contain drop-shadow-2xl z-20"
+          alt="Cup of Kenyan coffee splashing with coffee beans" 
+          width={431}
+          height={489}
+          loading="lazy"
+          decoding="async"
+          className="w-full max-w-[600px] h-auto object-contain drop-shadow-2xl z-20"
         />
       </motion.div>
 
