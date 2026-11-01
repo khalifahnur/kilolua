@@ -48,7 +48,7 @@ export default function Footer() {
 
   return (
     <>
-      <div className="relative z-20 w-full bg-royal-navy pt-20 pb-24 shadow-[0_20px_50px_rgba(0,0,0,0.5)] overflow-hidden">
+      <div className="relative z-20 w-full bg-royal-navy pt-20 pb-24  overflow-hidden">
         <div className="max-w-[1600px] mx-auto flex flex-col md:flex-row justify-between w-full h-full px-6 md:px-12 relative z-10">
           <div className="mb-20 md:mb-0">
             <div className="flex items-center gap-2 group cursor-pointer relative text-sand">
@@ -58,9 +58,9 @@ export default function Footer() {
               >
                 <div className="flex flex-col items-center">
                   <Image
-                    src={"/logo.png"}
-                    width={100}
-                    height={100}
+                    src={"/img/Kilolua-Red.png"}
+                    width={200}
+                    height={200}
                     alt="kilolua logo"
                   />
                 </div>
@@ -100,14 +100,17 @@ export default function Footer() {
           style={{ y }}
           className="w-full pt-16 max-w-[1600px] mx-auto flex flex-col justify-end min-h-[100svh] pb-8 px-6 md:px-12 flex-1"
         >
-          <div className="w-full overflow-hidden mt-auto pt-20 pb-4">
-            <p aria-hidden="true" className="font-playfair font-bold text-[#1e1e1e] text-[10vw] sm:text-[10vw] md:text-[12vw] leading-[0.75] select-none w-full align-center text-center uppercase">
+          <div className="w-full overflow-hidden mt-auto pt-20 pb-4 flex justify-center">
+            <p
+              aria-hidden="true"
+              className="font-playfair font-bold text-[#1e1e1e] text-[10vw] sm:text-[10vw] md:text-[12vw] leading-[0.75] select-none w-full text-justify [text-align-last:justify] md:text-center md:[text-align-last:center] uppercase"
+            >
               K I L O L U A
             </p>
           </div>
 
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 md:gap-0 mt-8 mb-12">
-            <div className="flex flex-wrap gap-x-6 gap-y-3 md:gap-10 font-lora text-xs font-bold opacity-80">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-6 md:gap-0 mt-8 mb-12 text-center md:text-left">
+            <div className="w-full md:w-auto flex flex-wrap justify-center md:justify-start gap-x-6 gap-y-3 md:gap-10 font-lora text-xs font-bold opacity-80 items-center text-center">
               <a
                 href="/contact"
                 onClick={(e) => {
@@ -118,21 +121,33 @@ export default function Footer() {
               >
                 {t("footer.contact")}
               </a>
-              <a href={emailHref} className="hover:text-royal-red transition-colors">
+              <a
+                href={emailHref}
+                className="hover:text-royal-red transition-colors"
+              >
                 {SITE.email}
               </a>
-              <a href={phoneHref} className="hover:text-royal-red transition-colors">
+              <a
+                href={phoneHref}
+                className="hover:text-royal-red transition-colors"
+              >
                 {SITE.phoneDisplay}
               </a>
-              <Link href="/privacy" className="hover:text-royal-red transition-colors uppercase">
+              <Link
+                href="/privacy"
+                className="hover:text-royal-red transition-colors uppercase"
+              >
                 {t("footer.privacy")}
               </Link>
-              <Link href="/terms" className="hover:text-royal-red transition-colors uppercase">
+              <Link
+                href="/terms"
+                className="hover:text-royal-red transition-colors uppercase"
+              >
                 {t("footer.terms")}
               </Link>
             </div>
 
-            <div className="font-lora text-xs opacity-70 font-medium">
+            <div className="w-full md:w-auto font-lora text-xs opacity-70 font-medium text-center md:text-right">
               {t("footer.rights")}
             </div>
           </div>

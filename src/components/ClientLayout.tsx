@@ -19,12 +19,10 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
   const { i18n } = useTranslation();
   const [isLoading, setIsLoading] = useState(true);
 
-  // The intro only plays once per browser session; later reloads skip straight to the page.
   useEffect(() => {
     try {
       if (sessionStorage.getItem(PRELOADER_KEY)) setIsLoading(false);
     } catch {
-      /* storage unavailable: just play the intro */
     }
   }, []);
 
@@ -37,7 +35,6 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
     setIsLoading(false);
   }, []);
 
-  // Restore the visitor's language choice and keep <html lang> in sync for screen readers and search engines.
   useEffect(() => {
     try {
       const saved = localStorage.getItem(LANG_KEY);

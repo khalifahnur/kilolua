@@ -1,10 +1,20 @@
-'use client';
+"use client";
 
 import { CheckCircle2, ArrowRight, Plus } from "lucide-react";
 import { useState, useEffect } from "react";
 import { motion } from "motion/react";
 import { useTranslation } from "react-i18next";
 import { openContact } from "../lib/contact";
+import Image from "next/image";
+
+interface TeamMember {
+  name: string;
+  title: string;
+  desc: string;
+  img?: string;
+  isCoFounder?: boolean;
+  mobileOrder: string;
+}
 
 export default function AboutScreen() {
   const { t } = useTranslation();
@@ -14,71 +24,141 @@ export default function AboutScreen() {
     window.scrollTo(0, 0);
   }, []);
 
-  const teamData = [
+  // Ordered for the desktop arch (0 = far left, 3 & 4 = center peak, 7 = far right)
+  // mobileOrder controls the 2-column hierarchy on smaller screens
+  const teamData: TeamMember[] = [
     {
-      name: "Gladys Mwangi",
-      title: t("about.team.gladys_title", "Chief Financial Officer"),
-      desc: t("about.team.gladys_desc", "Gladys leads financial management, controls and commercial oversight."),
+      name: "Jane Macharia",
+      title: t("about.team.jane_title", "Murang’a Region Liaison"),
+      desc: t(
+        "about.team.jane_desc",
+        "Jane provides Kilolua’s critical connection to coffee-growing communities.",
+      ),
+      mobileOrder: "order-3 md:order-none",
     },
     {
       name: "Ian Muiruri",
       title: t("about.team.ian_title", "Systems & Digital"),
-      desc: t("about.team.ian_desc", "Ian leads systems development, digital capability and marketing."),
+      desc: t(
+        "about.team.ian_desc",
+        "Ian leads systems development, digital capability and platform infrastructure.",
+      ),
+      mobileOrder: "order-3 md:order-none",
     },
     {
-      name: "Jane Macharia",
-      title: t("about.team.jane_title", "Murang’a Region Liaison"),
-      desc: t("about.team.jane_desc", "Jane provides Kilolua’s critical connection to coffee-growing communities."),
+      name: "Gladys Mwangi",
+      title: t("about.team.gladys_title", "Chief Financial Officer"),
+      desc: t(
+        "about.team.gladys_desc",
+        "Gladys leads financial management, controls and commercial oversight.",
+      ),
+      mobileOrder: "order-2 md:order-none",
     },
     {
-      name: "Christine Macharia-Denoon",
+      name: "Christine Macharia Denoon",
       title: t("about.team.christine_title", "Co-Founder & Strategic Lead"),
-      desc: t("about.team.christine_desc", "Christine leads Kilolua’s overall strategy, governance and commercial development."),
+      desc: t(
+        "about.team.christine_desc",
+        "Christine leads Kilolua’s overall strategy, governance and commercial development.",
+      ),
+      img: "/photos/c.png",
+      isCoFounder: true,
+      mobileOrder: "order-1 md:order-none",
     },
     {
       name: "Gordon Denoon",
       title: t("about.team.gordon_title", "Co-Founder & Sustainability"),
-      desc: t("about.team.gordon_desc", "Gordon is the sustainability and development initiatives lead."),
+      desc: t(
+        "about.team.gordon_desc",
+        "Gordon is the sustainability and development initiatives lead.",
+      ),
+      img: "/photos/i.png",
+      isCoFounder: true,
+      mobileOrder: "order-1 md:order-none",
+    },
+    {
+      name: "Eric Makari",
+      title: t("about.team.eric_title", "Director of Marketing"),
+      desc: t(
+        "about.team.eric_desc",
+        "Eric leads brand strategy, market positioning and global commercial outreach.",
+      ),
+      mobileOrder: "order-2 md:order-none",
     },
     {
       name: "Brian & Rose Macharia",
       title: t("about.team.brian_rose_title", "European Market"),
-      desc: t("about.team.brian_rose_desc", "Brian and Rose lead Kilolua’s French market development."),
+      desc: t(
+        "about.team.brian_rose_desc",
+        "Brian and Rose lead Kilolua’s French market development.",
+      ),
+      mobileOrder: "order-4 md:order-none",
     },
     {
       name: "Lily Macharia",
       title: t("about.team.lily_title", "Australia Market"),
-      desc: t("about.team.lily_desc", "Lily leads market outreach and relationship development in Australia."),
+      desc: t(
+        "about.team.lily_desc",
+        "Lily leads market outreach and relationship development in Australia.",
+      ),
+      mobileOrder: "order-4 md:order-none",
     },
   ];
 
   const faqs = [
     {
-      q: t("about.faqs.q1", "What makes Kilolua different from other suppliers?"),
-      a: t("about.faqs.a1", "Our team gives Kilolua an unusual farm-to-market footprint, connecting smallholder communities directly with international markets."),
+      q: t(
+        "about.faqs.q1",
+        "What makes Kilolua different from other suppliers?",
+      ),
+      a: t(
+        "about.faqs.a1",
+        "Our team gives Kilolua an unusual farm-to-market footprint, connecting smallholder communities directly with international markets.",
+      ),
     },
     {
       q: t("about.faqs.q2", "What is Stadipass?"),
-      a: t("about.faqs.a2", "Stadipass is our newly launched ticketing platform, bringing the same level of supply-chain expertise and technological capability to the event and experiences sector."),
+      a: t(
+        "about.faqs.a2",
+        "Stadipass is our newly launched ticketing platform, bringing the same level of supply-chain expertise and technological capability to the event and experiences sector.",
+      ),
     },
     {
       q: t("about.faqs.q3", "How do you ensure sustainability?"),
-      a: t("about.faqs.a3", "We focus on building commercially sustainable models that generate measurable economic and social value for our coffee-growing communities."),
+      a: t(
+        "about.faqs.a3",
+        "We focus on building commercially sustainable models that generate measurable economic and social value for our coffee-growing communities.",
+      ),
     },
     {
       q: t("about.faqs.q4", "Can I request a specific regional coffee?"),
-      a: t("about.faqs.a4", "Yes, our strong local relationships allow us to source highly specific, traceable lots from across Kenya."),
+      a: t(
+        "about.faqs.a4",
+        "Yes, our strong local relationships allow us to source highly specific, traceable lots from across Kenya.",
+      ),
     },
     {
       q: t("about.faqs.q5", "Where is Kilolua based?"),
-      a: t("about.faqs.a5", "We have team members positioned in Kenya, France, and Australia to ensure a truly global yet locally-rooted operation."),
+      a: t(
+        "about.faqs.a5",
+        "We have team members positioned in Kenya, France, and Australia to ensure a truly global yet locally-rooted operation.",
+      ),
     },
   ];
+
+  const getInitials = (name: string) =>
+    name
+      .split(" ")
+      .filter((part) => part !== "&")
+      .map((part) => part[0])
+      .slice(0, 2)
+      .join("")
+      .toUpperCase();
 
   return (
     <div className="w-full min-h-screen overflow-hidden pt-32 md:pt-48 pb-12">
       {/* OUR STORY SECTION */}
-      <motion.section 
+      <motion.section
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
@@ -94,11 +174,17 @@ export default function AboutScreen() {
           <div className="md:col-span-9 max-w-3xl">
             <div className="pl-6 border-l-2 border-[#ba172a]">
               <h2 className="font-playfair text-[#111a30] text-xl md:text-2xl leading-[1.1] mb-8">
-                {t("about.story_subtitle", "For Kilolua, a good cup of coffee tells a bigger story: of the people who grew it, the place it came from, and the value that can return to its community.")}
+                {t(
+                  "about.story_subtitle",
+                  "For Kilolua, a good cup of coffee tells a bigger story: of the people who grew it, the place it came from, and the value that can return to its community.",
+                )}
               </h2>
             </div>
             <p className="text-lg text-gray-600 leading-relaxed mb-12 font-lora">
-              {t("about.story_desc", "Kilolua began as a family business with a simple belief: strong relationships and reliable delivery can create lasting value. Founded in Kenya by Christine and Gordon Denoon, the company built its experience connecting people, goods and markets through procurement and logistics. Today, that experience is guiding Kilolua’s next chapter in coffee. Kenyan coffee carries the work of small-scale farmers in every cup. Kilolua wants more of that work to be seen and valued, especially the contribution of women. Its developing coffee approach starts at the farm: building responsible relationships with producers, protecting quality as coffee moves through the supply chain, and helping connect its origin to buyers who care about how it was grown. As a family-owned Kenyan company with connections across Africa, Europe and Australia, Kilolua brings a local understanding and an international outlook to that ambition. It is exploring ways to add value through quality, traceability and market access, while keeping farmer livelihoods and environmental care at the heart of its decisions.")}
+              {t(
+                "about.story_desc",
+                "Kilolua began as a family business with a simple belief: strong relationships and reliable delivery can create lasting value. Founded in Kenya by Christine and Gordon Denoon, the company built its experience connecting people, goods and markets through procurement and logistics. Today, that experience is guiding Kilolua’s next chapter in coffee. Kenyan coffee carries the work of small-scale farmers in every cup. Kilolua wants more of that work to be seen and valued, especially the contribution of women. Its developing coffee approach starts at the farm: building responsible relationships with producers, protecting quality as coffee moves through the supply chain, and helping connect its origin to buyers who care about how it was grown. As a family-owned Kenyan company with connections across Africa, Europe and Australia, Kilolua brings a local understanding and an international outlook to that ambition. It is exploring ways to add value through quality, traceability and market access, while keeping farmer livelihoods and environmental care at the heart of its decisions.",
+              )}
             </p>
           </div>
         </div>
@@ -107,7 +193,7 @@ export default function AboutScreen() {
       {/* TEAM SECTION */}
       <section className="pt-12 pb-16 overflow-hidden">
         <div className="max-w-[1400px] mx-auto px-4 md:px-8 flex flex-col items-center">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -115,16 +201,16 @@ export default function AboutScreen() {
           >
             {t("about.team_title", "THE PEOPLE BEHIND KILOLUA")}
           </motion.h2>
-          
-          <div className="w-full flex flex-col md:flex-row flex-wrap md:flex-nowrap justify-center gap-4 lg:gap-6 mb-24 relative">
+
+          <div className="w-full grid grid-cols-2 gap-x-4 gap-y-8 md:flex md:flex-row md:flex-nowrap justify-center md:gap-3 lg:gap-5 mb-24 relative">
             <div className="hidden md:block absolute top-[40%] left-0 w-full h-[300px] border-t border-gray-200 rounded-[100%] pointer-events-none -z-10"></div>
 
             {teamData.map((member, index) => {
               const getMarginTop = (idx: number) => {
-                if (idx === 3) return "md:mt-0";
-                if (idx === 2 || idx === 4) return "md:mt-12 lg:mt-16";
-                if (idx === 1 || idx === 5) return "md:mt-24 lg:mt-32";
-                return "md:mt-36 lg:mt-48";
+                if (idx === 3 || idx === 4) return "md:mt-0";
+                if (idx === 2 || idx === 5) return "md:mt-10 lg:mt-14";
+                if (idx === 1 || idx === 6) return "md:mt-20 lg:mt-28";
+                return "md:mt-32 lg:mt-44";
               };
 
               return (
@@ -133,12 +219,31 @@ export default function AboutScreen() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  key={index}
-                  className={`flex flex-col items-center w-full sm:w-[45%] md:w-[14%] mb-8 md:mb-0 ${getMarginTop(index)}`}
+                  key={member.name}
+                  className={`group flex flex-col items-center w-full md:w-[12%] ${member.mobileOrder} ${getMarginTop(index)}`}
                 >
-                  <div className="w-full max-w-[180px] aspect-[3/4] bg-[#e4decb]/40 rounded-2xl mb-4 shadow-sm border border-gray-200"></div>
+                  <div className="relative w-full max-w-[180px] aspect-[3/4] bg-[#e4decb]/40 rounded-2xl mb-4 shadow-sm border border-gray-200 overflow-hidden flex items-center justify-center">
+                    {member.img ? (
+                      <Image
+                        src={member.img}
+                        alt={`${member.name} - ${member.title}`}
+                        fill
+                        sizes="(max-width: 768px) 45vw, (max-width: 1200px) 12vw, 180px"
+                        quality={85}
+                        priority={Boolean(member.isCoFounder)}
+                        className="object-cover object-top duration-500 ease-out "
+                      />
+                    ) : (
+                      <span
+                        aria-hidden="true"
+                        className="font-playfair text-2xl text-[#111a30]/40 font-semibold select-none"
+                      >
+                        {getInitials(member.name)}
+                      </span>
+                    )}
+                  </div>
                   <div className="text-center px-1">
-                    <h3 className="font-playfair text-lg lg:text-xl font-medium text-[#111a30] mb-1 leading-tight">
+                    <h3 className="font-playfair text-base lg:text-lg font-medium text-[#111a30] mb-1 leading-tight">
                       {member.name}
                     </h3>
                     <div className="text-[10px] font-bold tracking-widest text-gray-400 uppercase">
@@ -150,16 +255,23 @@ export default function AboutScreen() {
             })}
           </div>
 
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             className="text-center max-w-3xl mx-auto px-8 relative z-10"
           >
             <h2 className="font-playfair text-[#111a30] text-4xl md:text-5xl lg:text-6xl leading-[1.1] mb-10">
-              {t("about.mission_statement", "Rooted in Kenya. Connected globally. One mission.")}
+              {t(
+                "about.mission_statement",
+                "Rooted in Kenya. Connected globally. One mission.",
+              )}
             </h2>
-            <button type="button" onClick={() => openContact()} className="bg-royal-red hover:bg-red-800 text-white font-medium text-lg px-8 py-3 rounded-full inline-flex items-center gap-3 transition-colors shadow-sm">
+            <button
+              type="button"
+              onClick={() => openContact()}
+              className="bg-royal-red hover:bg-red-800 text-white font-medium text-lg px-8 py-3 rounded-full inline-flex items-center gap-3 transition-colors shadow-sm"
+            >
               {t("about.contact_btn", "Contact us")}{" "}
               <ArrowRight
                 size={18}
@@ -170,8 +282,7 @@ export default function AboutScreen() {
         </div>
       </section>
 
-
-      <motion.section 
+      <motion.section
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
@@ -184,7 +295,10 @@ export default function AboutScreen() {
               {t("about.faq_title", "Common Questions & Answers")}
             </h2>
             <p className="text-sm text-gray-500 max-w-sm font-lora">
-              {t("about.faq_desc", "Our FAQ is here to answer what matters most, giving you clarity and confidence before you partner with us.")}
+              {t(
+                "about.faq_desc",
+                "Our FAQ is here to answer what matters most, giving you clarity and confidence before you partner with us.",
+              )}
             </p>
           </div>
 
@@ -214,7 +328,9 @@ export default function AboutScreen() {
                     aria-labelledby={`faq-btn-${i}`}
                     className={`grid transition-[grid-template-rows,opacity] duration-300 ease-in-out ${activeFaq === i ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"}`}
                   >
-                    <div className="overflow-hidden">
+                    <div
+                      className="overflow-hidden"
+                    >
                       <p className="text-gray-600 leading-relaxed font-lora pb-6">
                         {faq.a}
                       </p>

@@ -51,15 +51,15 @@ export default function Navbar() {
 
         <Link
           href="/"
-          className="flex flex-col items-center relative group cursor-pointer"
+          className="sm:flex flex-col items-center relative group cursor-pointer hidden "
         >
           <Image
             src="/logo.png"
-            width={90}
-            height={90}
+            width={150}
+            height={150}
             alt="Kilolua logo"
             priority
-            className="w-16 h-auto md:w-20"
+            className="w-16 h-auto md:w-28"
           />
         </Link>
 
@@ -68,7 +68,7 @@ export default function Navbar() {
             href="https://www.stadipass.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="group inline-flex items-center gap-1.5 sm:gap-2 bg-royal-navy hover:bg-blue-800 text-white font-medium text-xs sm:text-sm px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full transition-all duration-200 shadow-sm hover:shadow active:scale-95"
+            className="group inline-flex items-center gap-1.5 sm:gap-2 bg-royal-navy hover:bg-blue-800 text-white font-medium text-xs sm:text-sm px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full transition-all duration-200 shadow-sm hover:shadow "
           >
             <span>StadiPass</span>
             <ArrowRight
@@ -98,13 +98,29 @@ export default function Navbar() {
             data-lenis-prevent="true"
           >
             <div className="noise-overlay" aria-hidden="true" />
-            <div className="absolute top-12 left-6 flex gap-6 text-sand font-lora text-sm font-bold md:hidden z-10 opacity-80">
-              {/* <a href="#" className="hover:text-white transition-colors">IG</a>
-              <a href="#" className="hover:text-white transition-colors">FB</a>
-              <a href="#" className="hover:text-white transition-colors">IN</a> */}
+
+            <div className="absolute top-8 left-1/2 -translate-x-1/2 flex justify-center items-center md:hidden z-10">
+              <Link
+                href="/"
+                onClick={() => setIsOpen(false)}
+                className="flex flex-col items-center relative group cursor-pointer"
+              >
+                <Image
+                  src="/img/Kilolua-white.png"
+                  width={150}
+                  height={150}
+                  alt="Kilolua logo"
+                  priority
+                  className="w-30 h-auto"
+                />
+              </Link>
             </div>
+
             <div className="absolute bottom-0 left-0 w-full overflow-hidden flex justify-center items-end pointer-events-none md:hidden z-0 translate-y-1/4">
-              <p aria-hidden="true" className="font-playfair text-[25vw] leading-[0.7] text-sand/10 tracking-tighter whitespace-nowrap select-none">
+              <p
+                aria-hidden="true"
+                className="font-playfair text-[25vw] leading-[0.7] text-sand/10 tracking-tighter whitespace-nowrap select-none"
+              >
                 KILOLUA
               </p>
             </div>

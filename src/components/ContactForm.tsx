@@ -89,9 +89,9 @@ export default function ContactForm({ initialType = 'buyer' }: { initialType?: I
   const textField = (
     key: keyof ContactPayload,
     label: string,
-    opts: { type?: string; required?: boolean; autoComplete?: string } = {},
+    opts: { type?: string; required?: boolean; autoComplete?: string; className?: string } = {},
   ) => (
-    <div>
+    <div className={opts.className}>
       <label htmlFor={`${uid}-${key}`} className="sr-only">
         {label}
       </label>
@@ -112,8 +112,13 @@ export default function ContactForm({ initialType = 'buyer' }: { initialType?: I
     </div>
   );
 
-  const selectField = (key: keyof ContactPayload, label: string, options: { value: string; label: string }[]) => (
-    <div>
+  const selectField = (
+    key: keyof ContactPayload,
+    label: string,
+    options: { value: string; label: string }[],
+    className?: string,
+  ) => (
+    <div className={className}>
       <label htmlFor={`${uid}-${key}`} className="sr-only">
         {label}
       </label>
@@ -184,23 +189,31 @@ export default function ContactForm({ initialType = 'buyer' }: { initialType?: I
         </p>
       </fieldset>
 
-      {textField('name', t('contact_form.name'), { required: true, autoComplete: 'name' })}
-      {textField('email', t('contact_form.email'), { type: 'email', required: true, autoComplete: 'email' })}
-      {textField('phone', t('contact_form.phone'), { type: 'tel', autoComplete: 'tel' })}
+      {/* Primary Contact Details: 2x2 Grid (Name, Email, Phone, Company/Farm Name) */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4 lg:gap-y-5">
+        {textField('name', t('contact_form.name'), { required: true, autoComplete: 'name' })}
+        {textField('email', t('contact_form.email'), { type: 'email', required: true, autoComplete: 'email' })}
+        {textField('phone', t('contact_form.phone'), { type: 'tel', autoComplete: 'tel' })}
+        {isBuyer
+          ? textField('company', t('contact_form.company'), { autoComplete: 'organization' })
+          : textField('farmName', t('contact_form.farm_name'))}
+      </div>
 
+      {/* Inquiry Details: Paired in a 2-column grid to keep vertical height compact */}
       {isBuyer ? (
-        <>
-          {textField('company', t('contact_form.company'), { autoComplete: 'organization' })}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4 lg:gap-y-5">
           {selectField('interest', t('contact_form.interest'), [
             ...VARIETIES.map((v) => ({ value: v, label: v })),
             { value: 'Not sure yet', label: t('contact_form.interest_any') },
           ])}
           {textField('volume', t('contact_form.volume_buyer'))}
-          {textField('destination', t('contact_form.destination'), { autoComplete: 'country-name' })}
-        </>
+          {textField('destination', t('contact_form.destination'), {
+            autoComplete: 'country-name',
+            className: 'sm:col-span-2',
+          })}
+        </div>
       ) : (
-        <>
-          {textField('farmName', t('contact_form.farm_name'))}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4 lg:gap-y-5">
           {textField('location', t('contact_form.location'))}
           {selectField('variety', t('contact_form.variety'), [
             ...VARIETIES.map((v) => ({ value: v, label: v })),
@@ -213,7 +226,7 @@ export default function ContactForm({ initialType = 'buyer' }: { initialType?: I
             { value: 'Not sure', label: t('contact_form.processing_unsure') },
           ])}
           {textField('volume', t('contact_form.volume_farmer'))}
-        </>
+        </div>
       )}
 
       <div>

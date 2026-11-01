@@ -4,17 +4,18 @@ import { useTranslation } from "react-i18next";
 export default function Hero() {
   const { t } = useTranslation();
   return (
-    <section className="relative w-full h-[75svh] min-h-[500px] lg:h-screen lg:min-h-[700px] flex items-center justify-center overflow-hidden bg-sand">
-      <div className="noise-overlay" aria-hidden="true" />
+    <section className="relative isolate w-full h-[75svh] min-h-[500px] lg:h-screen lg:min-h-[700px] flex items-center justify-center overflow-hidden bg-sand">
+      {/* Keep noise strictly in the background so it never fades the text */}
+      <div className="noise-overlay z-0 pointer-events-none" aria-hidden="true" />
 
-      <div className="absolute inset-0 flex flex-col justify-center items-center w-full h-full pointer-events-none z-0 px-4">
-        <h1 className="flex flex-col items-center justify-center font-playfair text-royal-red font-bold text-[12vw] sm:text-[13vw] md:text-[9vw] lg:text-[9vw] xl:text-[9vw] leading-[0.85] tracking-tight distressed select-none w-full text-center mix-blend-multiply mt-25 md:mt-16">
+      <div className="absolute inset-0 flex flex-col justify-center items-center w-full h-full pointer-events-none z-10 px-4">
+        <h1 className="flex flex-col items-center justify-center font-playfair text-royal-red font-bold text-[12vw] sm:text-[13vw] md:text-[9vw] lg:text-[9vw] xl:text-[9vw] leading-[0.85] tracking-tight select-none w-full text-center mt-25 md:mt-16">
           <motion.span
             initial={{ opacity: 0, y: 50 }}
             viewport={{ once: false }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut" }}
-            className="z-0 relative whitespace-nowrap"
+            className="relative whitespace-nowrap"
           >
             {t("landing.hero.line1")}
           </motion.span>
@@ -23,7 +24,7 @@ export default function Hero() {
             viewport={{ once: false }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
-            className="z-0 relative mt-2 md:mt-3"
+            className="relative mt-2 md:mt-3"
           >
             <span className="whitespace-nowrap">
               {t("landing.hero.line2").split(" ")[0]}{" "}
@@ -37,13 +38,13 @@ export default function Hero() {
         </h1>
       </div>
 
-      <div className="relative z-10 w-full max-w-[1600px] h-full flex justify-between items-center px-6 md:px-12 mx-auto">
+      <div className="relative z-20 w-full max-w-[1600px] h-full flex justify-between items-center px-6 md:px-12 mx-auto">
         <motion.div
           initial={{ opacity: 0, scale: 0.8, rotate: -30 }}
           viewport={{ once: false }}
           whileInView={{ opacity: 1, scale: 1, rotate: -15 }}
           transition={{ duration: 1, delay: 0.4, ease: "easeOut" }}
-          className="absolute left-[5%] md:left-[8%] lg:left-[12%] top-[35%] md:top-[45%] w-24 h-24 md:w-36 md:h-36 lg:w-44 lg:h-44  flex items-center justify-center z-20 mix-blend-multiply"
+          className="absolute left-[5%] md:left-[8%] lg:left-[12%] top-[35%] md:top-[45%] w-24 h-24 md:w-36 md:h-36 lg:w-44 lg:h-44 flex items-center justify-center z-20 mix-blend-multiply"
         ></motion.div>
         <motion.div
           initial={{ opacity: 0, x: 50 }}

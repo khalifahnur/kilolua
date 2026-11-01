@@ -123,7 +123,6 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${playfair.variable} ${lora.variable} ${caveat.variable}`}>
       <head>
-        {/* Without JavaScript the intro preloader would cover the page forever. */}
         <noscript>
           <style>{'.preloader{display:none!important}'}</style>
         </noscript>
