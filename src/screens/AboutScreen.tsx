@@ -24,8 +24,6 @@ export default function AboutScreen() {
     window.scrollTo(0, 0);
   }, []);
 
-  // Ordered for the desktop arch (0 = far left, 3 & 4 = center peak, 7 = far right)
-  // mobileOrder controls the 2-column hierarchy on smaller screens
   const teamData: TeamMember[] = [
     {
       name: "Jane Macharia",
@@ -78,11 +76,12 @@ export default function AboutScreen() {
     },
     {
       name: "Eric Makari",
-      title: t("about.team.eric_title", "Director of Marketing"),
+      title: t("about.team.eric_title", "Communication & Marketing"),
       desc: t(
         "about.team.eric_desc",
         "Eric leads brand strategy, market positioning and global commercial outreach.",
       ),
+      img: "/photos/e.png",
       mobileOrder: "order-2 md:order-none",
     },
     {
