@@ -44,7 +44,7 @@ export default function AboutScreen() {
       mobileOrder: "order-3 md:order-none",
     },
     {
-      name: "Gladys Mwangi",
+      name: "CPA Gladys Mwangi",
       title: t("about.team.gladys_title", "Chief Financial Officer"),
       desc: t(
         "about.team.gladys_desc",
