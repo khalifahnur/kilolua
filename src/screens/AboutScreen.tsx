@@ -100,6 +100,7 @@ export default function AboutScreen() {
         "about.team.lily_desc",
         "Lily leads market outreach and relationship development in Australia.",
       ),
+      img: "/photos/k.png",
       mobileOrder: "order-4 md:order-none",
     },
   ];
